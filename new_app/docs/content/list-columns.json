@@ -1,0 +1,23 @@
+[
+  {"name":"checkbox","title":"選取","type":"html","style":{"width":100,"maxWidth":100,"color":"#2A968F"}},
+  {"name":"id","title":"案件編號","type":"number","style":{"width":200,"maxWidth":200}},
+  {"name":"name","title":"顧客姓名","style":{"width":100,"maxWidth":100,"minWidth":100}},
+  {"name":"gender","title":"性別","visible": false},
+  {"name":"email","title":"電子信箱","style":{"width":140,"maxWidth":140}},
+  {"name":"phone","title":"行動電話","visible": false},
+  {"name":"address","title":"地址","visible": false},
+  {"name":"ticketdate","title":"車票日期","visible": false,"type":"date","formatString":"YYYY/MM/DD"},
+  {"name":"cate","title":"問題分類","breakpoints":"all"},
+  {"name":"source","title":"意見來源","visible": false},
+  {"name":"type","title":"諮詢","style":{"width":70,"maxWidth":70}},
+  {"name":"location","title":"發生場所","style":{"width":90,"maxWidth":90}},
+  {"name":"train","title":"列車資訊","style":{"width":100,"maxWidth":100}},
+  {"name":"manager","title":"管理人","breakpoints":"xs sm","style":{"width":80,"maxWidth":80}},
+  {"name":"status","title":"案件狀態","breakpoints":"xs sm","style":{"width":100,"maxWidth":100}},
+  {"name":"started","title":"建案時間","type":"date","breakpoints":"xs sm","formatString":"YYYY/MM/DD"},
+  {"name":"reply","title":"回覆方式","visible": false},
+  {"name":"subject","title":"標題","breakpoints":"all"},
+  {"name":"content","title":"內容","breakpoints":"all"}
+]
+
+

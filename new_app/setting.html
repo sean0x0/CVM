@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/footable/footable.standalone.min.css">
+
+
+
+    <title></title>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow-sm border-bottom">
+            <!-- Container wrapper -->
+            <div class="container-xl ">
+                <!-- Navbar brand -->
+                <a class="navbar-brand text-center" href="#">
+                    <!-- <img src="#" height="15"
+                        alt="CVM Logo" loading="lazy" />-->CVM
+                </a>
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projects</a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+                
+
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Icon -->
+                    <a class="text-reset me-3" href="#">
+                        <i class="fa-solid fa-gear"></i>
+                    </a>
+
+                    <!-- Notifications -->
+                    <div class="dropdown">
+                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Avatar -->
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                            id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/CRD.png" class="rounded-circle" height="30"
+                                alt="" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right elements -->
+            </div>
+                <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <!--Navbar-->
+    <main>
+
+        <section class="container-xl mt-5">
+
+            <form class="form-horizontal" id="editor">
+                <div class="py-2">
+
+                    <h4 class="h3" id="editor-title">新增案件</h4>
+                   
+                </div>
+                <div class="row m-0">
+
+                    <div class="h3 py-2 mb-2 text-center bg-primary text-white rounded-3">顧客資訊</div>
+
+                    <div class="col-md-6 required p-2">
+                        <label for="name" class="col-sm-3 control-label">顧客姓名</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="顧客姓名"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 required p-2">
+                        <label for="gender" class="col-md-12 control-label">性別</label>
+                        <select class="form-control" id="gender" placeholder="問題分類" required>
+                            <option selected>請選擇性別</option>
+                            <option value="男">男</option>
+                            <option value="女">女</option>
+                            
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 required p-2">
+                        <label for="email" class="col-sm-3 control-label">電子信箱</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="電子信箱"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 p-2 required">
+                        <label for="phone" class="col-sm-3 control-label">行動電話</label>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="行動電話">
+
+                    </div>
+
+                    <div class="col-md-12 p-2 required">
+                        <label for="address" class="col-sm-3 control-label">地址</label>
+                        <input type="text" class="form-control" id="address" name="address"
+                            placeholder="請輸入地址">
+
+                    </div>
+
+                    <div class="col-md-6 p-2 required">
+
+
+                        <label for="ticketdate" class="col-md-12 control-label">車票日期</label>
+                        <input type="date" class="form-control" id="ticketdate" name="ticketdate"
+                            placeholder="車票日期" required>
+
+
+
+                    </div>
+
+
+                    <div class="col-md-6 p-2">
+                        <label for="status" class="col-sm-3 control-label">問題分類</label>
+                        <select class="form-control" id="cate" placeholder="問題分類" required>
+                            <option selected>請選擇問題分類</option>
+                            <option value="列車班次及時間">列車班次及時間</option>
+                            <option value="列車人員服務態度">列車人員服務態度</option>
+                            <option value="車廂服務(列車運轉問題)">車廂服務(列車運轉問題)</option>
+                            <option value="車站人員服務態度">車站人員服務態度</option>
+                            <option value="車站設施">車站設施</option>
+                            <option value="轉乘服務">轉乘服務</option>
+                            <option value="訂票相關服務">訂票相關服務</option>
+                            <option value="企業/行銷活動及附屬事業商品">企業/行銷活動及附屬事業商品</option>
+                            <option value="補充顧客意見資料">補充顧客意見資料</option>
+                            <option value="其他">其他</option>
+                        </select>
+
+                    </div>
+
+
+
+
+                    <div class="col-md-6 p-2 required">
+                        <label for="source" class="col-md-12 control-label">意見來源</label>
+                        <select class="form-control" id="source" placeholder="意見來源" required>
+                            <option selected>請選擇來源</option>
+                            <option value="客服">客服</option>
+                            <option value="列車">列車</option>
+                            
+                        </select>
+
+                    </div>
+
+
+
+
+                    <div class="col-md-6 p-2">
+                        <label for="type" class="col-sm-3 control-label">類型</label>
+                        <input type="text" class="form-control" id="type" name="type" placeholder="來源/類型"
+                            required>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 p-2">
+                        <label for="location" class="col-sm-3 control-label">發生場所</label>
+                        <input type="text" class="form-control" id="location" name="location"
+                            placeholder="發生場所" required>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 p-2">
+                        <label for="train" class="col-sm-3 control-label">列車資訊</label>
+                        <input type="text" class="form-control" id="train" name="train" placeholder="列車資訊"
+                            required>
+
+                    </div>
+
+
+
+
+                    <div class="col-md-6 p-2">
+                        <label for="manager" class="col-sm-3 control-label">管理人</label>
+                        <input type="text" class="form-control" id="manager" name="manager"
+                            placeholder="管理人" required>
+
+                    </div>
+
+
+
+
+
+                    <div class="col-md-6 p-2">
+                        <label for="status" class="col-sm-3 control-label">案件狀態</label>
+                        <select class="form-control" id="status" placeholder="案件狀態" required>
+                            <option selected>請選擇案件狀態</option>
+                            <option value="待分派">待分派</option>
+                            <option value="處理中">處理中</option>
+                            <option value="會辦中">會辦中</option>
+                            <option value="待去電">待去電</option>
+                            <option value="已結案">已結案</option>
+                        </select>
+
+                    </div>
+
+
+
+
+                    <div class="col-md-6 p-2">
+                        <label for="startedOn" class="col-sm-3 control-label">建案時間</label>
+                        <input type="date" class="form-control" id="startedOn" name="startedOn"
+                            placeholder="建案時間" required>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 p-2">
+                        <label for="reply" class="col-md-12 control-label">回覆方式</label>
+                        <select class="form-control" id="reply" placeholder="回覆方式" required>
+                            <option selected>請選擇回覆方式</option>
+                            <option value="電話聯絡">電話聯絡</option>
+                            <option value="電子信箱">電子信箱</option>
+                            <option value="郵寄">郵寄</option>
+                            <option value="毋需回覆">毋需回覆</option>
+                        </select>
+                    </div>
+
+
+
+
+                    <div class="col-md-12 p-2">
+                        <label for="subject" class="col-sm-3 control-label">標題</label>
+                        <input type="text" class="form-control" id="subject" name="subject"
+                            placeholder="主旨">
+
+                    </div>
+
+
+
+                    <div class="col-md-12 p-2">
+                        <label for="content" class="col-sm-3 form-label">內容</label>
+                        <textarea type="text" class="form-control" id="content" name="content"
+                            placeholder="內容" required></textarea>
+
+                    </div>
+
+                    <div class="col-md-12 p-2">
+                        <label for="formFile" class="form-label">上傳附件</label>
+                        <input class="form-control" type="file" id="formFile">
+                      </div>
+
+                </div>
+               
+                   
+                    <button type="button" class="btn btn-primary my-3 float-end">Save changes</button>
+
+            </form>
+            
+        </section>
+
+
+    </main>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    <script src="js/footable/footable.js"></script>
+
+
+</body>
+
+</html>
