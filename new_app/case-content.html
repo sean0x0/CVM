@@ -27,97 +27,71 @@
         <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow-sm border-bottom">
             <!-- Container wrapper -->
             <div class="container-xl ">
+                
+                <!--collapsed sidebar-->
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="#">未結案案件</a>
+                    <a href="#">XXXXX</a>
+                    <a href="#">XXXXX</a>
+                    <a href="#">XXXXX</a>
+                  </div>
+                <!--collapsed sidebar-->
+                <button class="openbtn" onclick="openNav()">
+                    <i class="fas fa-bars"></i>
+                </button>  
                 <!-- Navbar brand -->
-                <a class="navbar-brand text-center" href="#">
+                <a class="navbar-brand text-center fs-3 fw-bold text-primary" href="#" style="margin-left:110px;">
                     <!-- <img src="#" height="15"
                         alt="CVM Logo" loading="lazy" />-->CVM
                 </a>
                 <!-- Toggle button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Icon -->
+                    <a class="text-reset me-3" href="#">
+                        <i class="fa-solid fa-gear"></i>
+                    </a>
 
-                <!-- Collapsible wrapper -->
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-
-                    <!-- Left links -->
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
-                        </li>
-                    </ul>
-                    <!-- Left links -->
-
-
-                    <!-- Right elements -->
-                    <div class="d-flex align-items-center">
-                        <!-- Icon -->
-                        <a class="text-reset me-3" href="#">
-                            <i class="fa-solid fa-gear"></i>
+                    <!-- Notifications -->
+                    <div class="dropdown">
+                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
                         </a>
-
-                        <!-- Notifications -->
-                        <div class="dropdown">
-                            <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-solid fa-bell"></i>
-                                <span class="badge rounded-pill badge-notification bg-danger">1</span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                                <li>
-                                    <a class="dropdown-item" href="#">Some news</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Another news</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Avatar -->
-                        <div class="dropdown">
-                            <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
-                                id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                <img src="img/CRD.png" class="rounded-circle" height="30" alt="" loading="lazy" />
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
-                                <li>
-                                    <a class="dropdown-item" href="#">My profile</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Settings</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Logout</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- Right elements -->
+                    <!-- Avatar -->
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                            id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/CRD.png" class="rounded-circle" height="30" alt="" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- Collapsible wrapper -->
+                <!-- Right elements -->
             </div>
             <!-- Container wrapper -->
         </nav>
@@ -126,9 +100,9 @@
     <!--Navbar-->
     <main>
 
-        <section class="container-xl mt-5">
+        <section class="container-xl">
 
-            <div class="mt-2 mb-4 bg-white rounded-3 d-flex justify-content-center shadow-sm">
+            <div class="my-4 bg-white rounded-3 d-flex justify-content-center shadow sticky-top">
 
                 <div class="fs-3 lh-lg p-3 bd-highlight my-auto">案件編號&nbsp;<span
                         class="fs-3">202108170046</span>&nbsp;<span class="fs-5 text-muted align-text-bottom">待分派</span>
@@ -527,6 +501,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
     <script src="js/footable/footable.js"></script>
+    <script src="js/collapsed-sidebar.js"></script>
 
 
 </body>
