@@ -232,7 +232,7 @@
     --ct-bg-topbar-light: #fff;
     --ct-bg-topbar-dark: #38414a;
     --ct-box-shadow-condensed: 3px 5px 10px 0 rgba(154, 161, 171, 0.2);
-    --ct-footer-bg: #eeeff3;
+    --ct-footer-bg: #343a40;
     --ct-auth-bg: #fff;
     --ct-auth-bg-alt: #2A968F;
     --ct-apex-grid-color: #f9f9fd;
@@ -445,7 +445,7 @@ body[data-layout-color=dark] {
     --ct-bg-topbar-light: #3c4752;
     --ct-bg-topbar-dark: #3c4752;
     --ct-box-shadow-condensed: 3px 5px 10px 0 rgb(50, 58, 66);
-    --ct-footer-bg: #2b323a;
+    --ct-footer-bg: #343a40;
     --ct-auth-bg: #36404a;
     --ct-auth-bg-alt: #3e4852;
     --ct-apex-grid-color: #3e4852;
@@ -2512,6 +2512,7 @@ progress {
     font-weight: 500;
 }
 
+
 .table>:not(:first-child) {
     border-top: 2px solid var(--ct-table-group-separator-color)
 }
@@ -3002,7 +3003,8 @@ textarea.form-control-lg {
 .form-check-input {
     width: 1.143em;
     height: 1.143em;
-    margin-top: .1785em;
+    /* margin-top: .1785em; */
+    margin-top: 0;
     vertical-align: top;
     background-color: var(--ct-form-check-input-bg);
     background-repeat: no-repeat;
@@ -5063,7 +5065,7 @@ fieldset:disabled .btn {
 }
 
 .nav-tabs .nav-link {
-    margin-bottom: -1px;
+    margin-bottom: 0px;
     background: 0 0;
     border: 1px solid transparent;
     border-top-left-radius: .25rem;
@@ -16888,7 +16890,7 @@ body[data-leftbar-size=condensed] .user-box {
 @media (max-width:991.98px) {
     body {
         overflow-x: hidden;
-        padding-bottom: 80px
+        /* padding-bottom: 80px */
     }
 
     .left-side-menu {
@@ -17773,12 +17775,14 @@ body[data-layout-color=dark] .page-title-box .page-title {
 
 .footer {
     bottom: 0;
-    padding: 19px 15px 20px;
-    position: absolute;
+    padding: 30px 20px;
+    
     right: 0;
-    color: var(--ct-text-muted);
-    left: 240px;
-    background-color: var(--ct-footer-bg)
+    color: #FFF;
+    font-size:.8rem;
+    background-color: var(--ct-footer-bg);
+    text-align: center;
+    margin-top:20px;
 }
 
 .footer .footer-links a {

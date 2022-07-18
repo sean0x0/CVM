@@ -86,14 +86,24 @@ button:hover {
 }
 
 .control-label,.form-check-label {
-    color: var(--ct-table-color);
-    font-size: .9rem;
+    color: #323a46;
+    font-size: 1rem;
 }
 
 /*tab*/
 #nav-tabContent {
     min-height: 500px;
+    /* z-index: 2; */
 }
+/* .nav-tabs .nav-link{
+  z-index: -1;
+} */
+.nav-tabs .nav-link.active {
+  margin-top: -2px;
+  
+  box-shadow: -2px -2px 8px -5px rgb(0 0 0 / 10%);
+  
+} 
 
 /*collapsed sidebar*/
 
@@ -101,7 +111,7 @@ button:hover {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 1500;
     top: 0;
     left: 0;
     background-color: #385B5D;
@@ -159,3 +169,12 @@ button:hover {
 .shadow-light {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+
+.required .control-label:after {
+  content: "*";
+  color: red;
+  margin-left: 4px;
+}
+
+/* back to top */
