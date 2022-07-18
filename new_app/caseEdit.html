@@ -1,0 +1,1380 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/footable/footable.standalone.min.css">
+
+
+
+    <title></title>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom">
+            <!-- Container wrapper -->
+            <div class="container-fluid ">
+                
+                <!--collapsed sidebar-->
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <a href="#">未結案案件</a>
+                    <a href="#">XXXXX</a>
+                    <a href="#">XXXXX</a>
+                    <a href="#">XXXXX</a>
+                  </div>
+                <!--collapsed sidebar-->
+                <button class="openbtn" onclick="openNav()">
+                    <i class="fas fa-bars"></i>
+                </button>  
+                <!-- Navbar brand -->
+                <a class="navbar-brand text-center fs-3 fw-bold text-primary" href="#" style="margin-left:110px;">
+                    <!-- <img src="#" height="15"
+                        alt="CVM Logo" loading="lazy" />-->CVM
+                </a>
+                <!-- Toggle button -->
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Icon -->
+                    <a class="text-reset me-3" href="#">
+                        <i class="fa-solid fa-gear"></i>
+                    </a>
+
+                    <!-- Notifications -->
+                    <div class="dropdown">
+                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Avatar -->
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                            id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/CRD.png" class="rounded-circle" height="30" alt="" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <!--Navbar-->
+    <main>
+
+        <section class="container-xl my-4 ">
+
+            <div class="mb-4 bg-white rounded-3 d-flex justify-content-center shadow-light sticky-top">
+                <div class="row p-3 text-center">
+                    <p class="col-12 fs-1 fw-bolder m-0 p-0 g-0 bd-highlight">案件&nbsp;<span
+                            class="fs-1 fw-bolder">202108170046</span>&nbsp;<span
+                            class="fs-5 badge bg-primary text-white align-text-top">待分派</span>
+                    </p>
+                    <p class="col-12 fs-5 m-0 p-0 g-0 text-muted">暫存類案件編號：<span>T202108170046</span></p>
+
+                    
+                </div>
+            </div>
+            <!--內容頁籤-->
+            <nav>
+                <div class="nav nav-tabs border-0" id="nav-tab" role="tablist">
+                    <button class="nav-link border-0 text-primary active" id="nav-info-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-info" type="button" role="tab" aria-controls="nav-info"
+                        aria-selected="true">案件資訊</button>
+                    <button class="nav-link border-0" id="nav-window-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-window" type="button" role="tab" aria-controls="nav-window"
+                        aria-selected="false">窗口通知</button>
+                    <button class="nav-link border-0" id="nav-letter-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-letter" type="button" role="tab" aria-controls="nav-letter"
+                        aria-selected="false">信件通知(顧客)</button>
+                    <button class="nav-link border-0" id="nav-callout-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-callout" type="button" role="tab" aria-controls="nav-callout"
+                        aria-selected="false">外撥紀錄</button>
+                    <button class="nav-link border-0" id="nav-history-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-history" type="button" role="tab" aria-controls="nav-history"
+                        aria-selected="false">案件歷程</button>
+                    <button class="nav-link border-0" id="nav-trace-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-trace" type="button" role="tab" aria-controls="nav-trace"
+                        aria-selected="false">案件追蹤</button>
+                    <button class="nav-link border-0" id="nav-refund-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-refund" type="button" role="tab" aria-controls="nav-refund"
+                        aria-selected="false">退費/退券/郵遞</button>
+                    <button class="nav-link border-0" id="nav-backtosearch-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-backtosearch" type="button" role="tab" aria-controls="nav-backtosearch"
+                        aria-selected="false">回查詢</button>
+                </div>
+            </nav>
+
+            <div class="tab-content bg-white p-4 shadow-sm" id="nav-tabContent">
+
+                <!--案件資訊 TAB 開始-------------------------------------------------------->
+
+                <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+                    <form class="form-horizontal">
+
+                        <div class="g-3 text-dark">
+
+                            <!-- 案件處理人員 start -->
+                            <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                                <p class="fs-2 fw-bold pb-3 lh-1 ">案件處理人員</p>
+
+                                <div class="col-md-6 gy-2 gx-2 input-group required">
+
+                                    <label for="manager" class="col-12 control-label">管理人員</label>
+
+                                    <select class="form-control" id="manager" required>
+
+                                        <option selected>許文達</option>
+                                        <option value="劉雅慧">劉雅慧</option>
+                                        <option value="徐惠萍">徐惠萍</option>
+                                        <option value="劉筱珮">劉筱珮</option>
+                                        <option value="林若瑩">林若瑩</option>
+                                        <option value="林欣瑩">林欣瑩</option>
+                                        <option value="張之魁">張之魁</option>
+                                        <option value="夏邦雄">夏邦雄</option>
+                                        <option value="沈文華">沈文華</option>
+                                        <option value="曾如鈺">曾如鈺</option>
+                                        <option value="陳彥妤">陳彥妤</option>
+                                        <option value="黃思綺">黃思綺</option>
+                                        <option value="張永豐">張永豐</option>
+                                        <option value="武喜佳">武喜佳</option>
+                                        <option value="林巧玟">林巧玟</option>
+                                        <option value="方意婷">方意婷</option>
+                                        <option value="方舒賢">方舒賢</option>
+                                        <option value="周詩涵">周詩涵</option>
+                                        <option value="王翊如">王翊如</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-primary">更新</button>
+
+                                </div>
+                                <div class="col-md-6 gy-2 gx-2 input-group required">
+
+                                    <label for="manager" class="col-12 control-label">待確認案件人員&nbsp;<span
+                                            class="fs-6">(檢視web案件的回覆內容)</span></label>
+
+                                    <select class="form-control" id="manager" required>
+
+                                        <option selected>許文達</option>
+                                        <option value="劉雅慧">劉雅慧</option>
+                                        <option value="徐惠萍">徐惠萍</option>
+                                        <option value="劉筱珮">劉筱珮</option>
+                                        <option value="林若瑩">林若瑩</option>
+                                        <option value="林欣瑩">林欣瑩</option>
+                                        <option value="張之魁">張之魁</option>
+                                        <option value="夏邦雄">夏邦雄</option>
+                                        <option value="沈文華">沈文華</option>
+                                        <option value="曾如鈺">曾如鈺</option>
+                                        <option value="陳彥妤">陳彥妤</option>
+                                        <option value="黃思綺">黃思綺</option>
+                                        <option value="張永豐">張永豐</option>
+                                        <option value="武喜佳">武喜佳</option>
+                                        <option value="林巧玟">林巧玟</option>
+                                        <option value="方意婷">方意婷</option>
+                                        <option value="方舒賢">方舒賢</option>
+                                        <option value="周詩涵">周詩涵</option>
+                                        <option value="王翊如">王翊如</option>
+                                    </select>
+                                    <button type="submit" class="btn btn-primary">更新</button>
+
+                                </div>
+                                <!-- <div class="row col-md-6 gy-2 gx-2">
+                                            <div class="col-8 required">
+                                                <label for="persontoconfirm"
+                                                    class="col-auto control-label">待確認案件人員&nbsp;<span
+                                                        class="fs-6">(檢視web案件的回覆內容)</span></label>
+                                                <select class="form-control" id="persontoconfirm" required>
+
+                                                    <option selected>許文達</option>
+                                                    <option value="劉雅慧">劉雅慧</option>
+                                                    <option value="徐惠萍">徐惠萍</option>
+                                                    <option value="劉筱珮">劉筱珮</option>
+                                                    <option value="林若瑩">林若瑩</option>
+                                                    <option value="林欣瑩">林欣瑩</option>
+                                                    <option value="張之魁">張之魁</option>
+                                                    <option value="夏邦雄">夏邦雄</option>
+                                                    <option value="沈文華">沈文華</option>
+                                                    <option value="曾如鈺">曾如鈺</option>
+                                                    <option value="陳彥妤">陳彥妤</option>
+                                                    <option value="黃思綺">黃思綺</option>
+                                                    <option value="張永豐">張永豐</option>
+                                                    <option value="武喜佳">武喜佳</option>
+                                                    <option value="林巧玟">林巧玟</option>
+                                                    <option value="方意婷">方意婷</option>
+                                                    <option value="方舒賢">方舒賢</option>
+                                                    <option value="周詩涵">周詩涵</option>
+                                                    <option value="王翊如">王翊如</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-2">
+                                                <label for="" class="control-label invisible">更新</label>
+                                                <button type="submit" class="btn btn-primary">更新</button>
+                                            </div>
+                                        </div> -->
+
+
+
+                                <div class="row col gy-2 gx-1 required">
+
+                                    <label for="organizer" class="col-sm-3 control-label">承辦單位</label>
+
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>分派日期</th>
+                                                <th>承辦單位</th>
+                                                <th>承辦人員</th>
+                                                <th>案件狀態</th>
+                                                <th>處理天數</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>2022/04/02 10:23:25</td>
+                                                <td>資訊處</td>
+                                                <td>邱小原</td>
+                                                <td>待回覆</td>
+                                                <td>2</td>
+                                                <td><button type="button" class="btn btn-primary">取回</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>2022/04/02 10:23:25</td>
+                                                <td><select class="form-control" id="organizer" placeholder="承辦單位">
+                                                        <option selected>請選擇承辦單位</option>
+                                                        <option value="運務處">運務處</option>
+                                                        <option value="維修處">維修處</option>
+                                                        <option value="資訊處" selected>資訊處</option>
+                                                        <option value="營業處">營業處</option>
+                                                        <option value="旅遊事業處">旅遊事業處</option>
+                                                        <option value="公共事務">公共事務處</option>
+                                                        <option value="法務室">法務室</option>
+                                                        <option value="財會處">財會處</option>
+                                                    </select></td>
+                                                <td><select class="form-control" id="undertaker" placeholder="承辦人員">
+                                                        <option selected>請選擇承辦人員</option>
+                                                        <option value="運務處">陳小華</option>
+                                                        <option value="維修處" selected>邱小原</option>
+                                                        <option value="資訊處">林小東</option>
+                                                        <option value="營業處">李小西</option>
+                                                        <option value="旅遊事業處">洪小花</option>
+
+                                                    </select></td>
+                                                <td>待回覆</td>
+                                                <td>2</td>
+                                                <td><button type="button" class="btn btn-primary">更新</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>2022/04/01 10:23:25</td>
+                                                <td>品牌暨傳播部</td>
+                                                <td>黃小芬</td>
+                                                <td>已回覆</td>
+                                                <td>2</td>
+                                                <td><button type="button" class="btn btn-primary" disabled>取回</button>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- 案件處理人員 end  -->
+                            <!-- 顧客資訊 start -->
+                            <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                                <p class="fs-2 fw-bold pb-3 lh-1 ">顧客資訊</p>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="name" class="col-auto control-label">顧客姓名</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="顧客姓名"
+                                            required>
+                                    </div>
+
+                                </div>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="gender" class="col-md-12 control-label">性別</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1" checked>
+                                            <label class="form-check-label" for="flexRadioDefault1">男</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">女</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required row gy-1 gx-2">
+                                        <label for="email" class="col-12 control-label">電子信箱</label>
+                                        <div class="col-6 gy-0">
+                                            <label class="visually-hidden" for="autoSizingInput">Name</label>
+                                            <input type="email" class="form-control" id="autoSizingInput" placeholder="">
+                                        </div>
+                                        <div class="col-6 gy-0">
+                                            <label class="visually-hidden" for="autoSizingInputGroup"></label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">@</div>
+                                                <input type="email" class="form-control" id="autoSizingInputGroup"
+                                                    placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="phone" class="col-auto control-label">行動電話</label>
+                                        <input type="text" class="form-control" id="phone" name="phone"
+                                            placeholder="行動電話" required>
+                                    </div>
+
+                                </div>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="address" class="col-auto control-label">地址</label>
+                                        <input type="text" class="form-control" id="address" name="address"
+                                            placeholder="請輸入地址" required>
+                                    </div>
+
+                                </div>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required row gy-1 gx-2 align-items-center">
+                                        <label for="landline" class="col-12 control-label">室內電話</label>
+                                        <div class="col-6 gy-0">
+                                            <label class="visually-hidden" for="autoSizingInput">電話號碼</label>
+                                            <input type="text" class="form-control" id="landline" placeholder="">
+                                        </div>
+
+
+                                        <div class="col-6 gy-0">
+                                            <label class="visually-hidden" for="autoSizingInputGroup">分機</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">分機</div>
+                                                <input type="text" class="form-control" id="extension" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 d-grid gap-2 d-flex justify-content-center">
+                                    <button type="button" class="btn btn-primary my-3">更新</button>
+                                    <button type="button" class="btn btn-primary my-3">取消</button>
+                                </div>
+
+
+                            </div>
+                            <!-- 顧客資訊 end  -->
+
+                            <!-- 車票資訊 start -->
+                            <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                                <p class="fs-2 fw-bold pb-3 lh-1 ">車票資訊</p>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="ticketDate" class="col-auto control-label">車票日期</label>
+                                        <input type="date" class="form-control" id="ticketDate" name="ticketDate"
+                                            placeholder="" required>
+                                    </div>
+
+                                </div>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="trainNo" class="col-auto control-label">車次</label>
+                                        <input type="text" class="form-control" id="trainNo" name="trainNo"
+                                            placeholder="" required>
+                                    </div>
+
+                                </div>
+
+                                <div class="row col-lg-6 gy-2 gx-2 justify-content-between">
+                                    <div class="col required row gy-1 gx-2">
+                                        <label for="email" class="col-12 control-label">起迄車站/時間</label>
+
+                                        <div class="col-3 gy-0">
+                                            <label class="visually-hidden" for="autoSizingInputGroup">起站</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">起站</div>
+                                                <select class="form-control" name="selectStartStation">
+                                                    <option selected>請選擇...</option>
+                                                    <option value="1">南港</option>
+                                                    <option value="2">台北</option>
+                                                    <option value="3">板橋</option>
+                                                    <option value="4">桃園</option>
+                                                    <option value="5">新竹</option>
+                                                    <option value="6">苗栗</option>
+                                                    <option value="7">台中</option>
+                                                    <option value="8">彰化</option>
+                                                    <option value="9">雲林</option>
+                                                    <option value="10">嘉義</option>
+                                                    <option value="11">台南</option>
+                                                    <option value="12">左營</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 gy-0">
+                                            <label class="visually-hidden" for="startTime">時間</label>
+                                            <input type="time" class="form-control" id="startTime" placeholder="">
+                                        </div>
+                                        <div class="col-3 gy-0">
+                                            <label class="visually-hidden" for="autoSizingInputGroup">迄站</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">迄站</div>
+                                                <select class="form-control" name="selectStartStation">
+                                                    <option selected>請選擇...</option>
+                                                    <option value="1">南港</option>
+                                                    <option value="2">台北</option>
+                                                    <option value="3">板橋</option>
+                                                    <option value="4">桃園</option>
+                                                    <option value="5">新竹</option>
+                                                    <option value="6">苗栗</option>
+                                                    <option value="7">台中</option>
+                                                    <option value="8">彰化</option>
+                                                    <option value="9">雲林</option>
+                                                    <option value="10">嘉義</option>
+                                                    <option value="11">台南</option>
+                                                    <option value="12">左營</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 gy-0">
+                                            <label class="visually-hidden" for="startTime">時間</label>
+                                            <input type="time" class="form-control" id="startTime" placeholder="">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="car" class="col-auto control-label">車廂</label>
+                                        <select class="form-control" name="car">
+                                            <option selected>請選擇...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="seat" class="col-auto control-label">座位</label>
+                                        <input type="text" class="form-control" id="seat" name="seat" placeholder="3C"
+                                            required>
+                                    </div>
+
+                                </div>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required row gy-1 gx-2 align-items-center">
+                                        <label for="landline" class="col-12 control-label">票號/卡號</label>
+                                        <div class="col-6 gy-0">
+                                            <label class="visually-hidden" for="autoSizingInputGroup">車票種類</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">票種</div>
+                                                <select class="form-control" id="ticketType" placeholder="">
+                                                    <option selected>請選擇票種</option>
+                                                    <option>訂位代號</option>
+                                                    <option>票號</option>
+                                                    <option>回數票</option>
+                                                    <option>定期票</option>
+                                                    <option>悠遊聯名卡</option>
+                                                    <option>一卡通聯名卡</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 gy-0">
+                                            <label class="visually-hidden" for="autoSizingInput">票號</label>
+                                            <input type="text" class="form-control" id="ticketNo" placeholder="請輸入票種號碼">
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+                                <div class="col-12 d-grid gap-2 d-flex justify-content-center">
+                                    <button type="button" class="btn btn-primary my-3">更新</button>
+                                    <button type="button" class="btn btn-primary my-3">取消</button>
+                                </div>
+
+
+                            </div>
+                            <!-- 車票資訊 end  -->
+
+                            <!-- 補充資訊 start -->
+                            <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                                <p class="fs-2 fw-bold pb-3 lh-1 ">補充資訊</p>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="inquiry" class="col-auto control-label">問題分類</label>
+                                        <select class="form-control" name="inquiry">
+                                            <option disabled value="">請選擇</option>
+                                            <option value="A">列車班次及時間</option>
+                                            <option value="B">列車人員服務態度</option>
+                                            <option value="C" selected>車廂服務(列車運轉問題)</option>
+                                            <option value="D">車站人員服務態度</option>
+                                            <option value="E">車站設施</option>
+                                            <option value="F">轉乘服務</option>
+                                            <option value="G">訂票相關服務</option>
+                                            <option value="H">企業/行銷活動及附屬事業商品</option>
+                                            <option value="I" selected>補充顧客意見資料</option>
+                                            <option value="J">其他</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="duration" class="col-12 control-label">搭乘時間</label>
+                                        <input type="time" class="form-control" id="duration" name="duration"
+                                            placeholder="" required>
+                                    </div>
+
+                                </div>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="duration" class="col-12 control-label">發生時間</label>
+                                        <input type="time" class="form-control" id="occurtime" name="occurtime"
+                                            placeholder="" required>
+                                    </div>
+
+                                </div>
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required row gy-1 gx-2">
+                                        <label for="duration" class="col-12 control-label">列車運行區間</label>
+                                        <div class="col-6 gy-0">
+                                            <label class="visually-hidden" for="autoSizingInputGroup">從</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">從</div>
+                                                <select class="form-control" name="selectStartStation">
+                                                    <option selected>請選擇...</option>
+                                                    <option value="1">南港</option>
+                                                    <option value="2">台北</option>
+                                                    <option value="3">板橋</option>
+                                                    <option value="4">桃園</option>
+                                                    <option value="5">新竹</option>
+                                                    <option value="6">苗栗</option>
+                                                    <option value="7">台中</option>
+                                                    <option value="8">彰化</option>
+                                                    <option value="9">雲林</option>
+                                                    <option value="10">嘉義</option>
+                                                    <option value="11">台南</option>
+                                                    <option value="12">左營</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 gy-0">
+                                            <label class="visually-hidden" for="autoSizingInputGroup">開往</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">開往</div>
+                                                <select class="form-control" name="selectStartStation">
+                                                    <option selected>請選擇...</option>
+                                                    <option value="1">南港</option>
+                                                    <option value="2">台北</option>
+                                                    <option value="3">板橋</option>
+                                                    <option value="4">桃園</option>
+                                                    <option value="5">新竹</option>
+                                                    <option value="6">苗栗</option>
+                                                    <option value="7">台中</option>
+                                                    <option value="8">彰化</option>
+                                                    <option value="9">雲林</option>
+                                                    <option value="10">嘉義</option>
+                                                    <option value="11">台南</option>
+                                                    <option value="12">左營</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-12 d-grid gap-2 d-flex justify-content-center">
+                                    <button type="button" class="btn btn-primary my-3">更新</button>
+                                    <button type="button" class="btn btn-primary my-3">取消</button>
+                                </div>
+
+
+                            </div>
+                            <!-- 補充資訊 end  -->
+
+
+
+                            <!-- 案件內容 start -->
+                            <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                                <p class="fs-2 fw-bold pb-3 lh-1 ">案件內容</p>
+
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col-auto required">
+                                        <label for="type" class="col-auto control-label">案件類型</label>
+                                        <select class="form-control" name="type">
+                                            <option selected>請選擇案件類型</option>
+                                            <option value="諮詢">諮詢</option>
+                                            <option value="讚揚">讚揚</option>
+                                            <option value="期許">期許</option>
+                                            <option value="建議">建議</option>
+                                            <option value="抱怨">抱怨</option>
+                                            <option value="客訴">客訴</option>
+                                            <option value="其他">其他</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-auto">
+                                        <label for="urgent" class="col-md-12 control-label invisible">急件</label>
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="checkbox" id="urgent" value="急件">
+                                            <label class="form-check-label" for="urgent">急件</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--案件主旨-->
+                                <div class="row col-12 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="subject" class="col-12 control-label">案件主旨</label>
+                                        <textarea type="text" class="form-control" id="subject" name="subject"
+                                            placeholder="請輸入主旨" required>給高鐵一個讚！</textarea>
+                                    </div>
+                                </div>
+                                <!--案件內容-->
+                                <div class="row col-12 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="content" class="col-12 control-label">案件內容</label>
+                                        <textarea type="text" class="form-control" id="content" name="content"
+                                            placeholder="請輸入內容"
+                                            required>高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒</textarea>
+                                    </div>
+                                </div>
+
+
+                                <!--分類 start-->
+
+                                <div class="row col-12 gy-2 gx-2 align-items-center">
+                                    <div class="col-3 required">
+                                        <label for="category" class="col-12 control-label">分類</label>
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>訂票／付款／取票／退換票(新)</option>
+                                            <option>訂票／付款／取票／退換票(新)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required">
+                                        <label for="category" class="col-12 control-label invisible">分類</label>
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>規範及作業</option>
+                                            <option>規範及作業</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required">
+                                        <label for="category" class="col-12 control-label invisible">分類</label>
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>規範及作業</option>
+                                            <option>規範及作業</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required">
+                                        <label for="category" class="col-12 control-label invisible">新增分類</label>
+                                        <button type="button" class="col btn btn-primary my-1">新增分類</button>
+                                    </div>
+
+
+                                    <!--如果新增分類 加入從這開始-->
+                                    <div class="col-3 required gy-0">
+
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>訂票／付款／取票／退換票(新)</option>
+                                            <option>訂票／付款／取票／退換票(新)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required gy-0">
+
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>規範及作業</option>
+                                            <option>規範及作業</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required gy-0">
+
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>規範及作業</option>
+                                            <option>規範及作業</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required gy-0">
+
+                                        <button type="button" class="col btn btn-primary my-1">新增分類</button>
+                                    </div>
+                                    <!--如果新增分類 加入到這結束-->
+                                    <div class="col-auto">
+                                        <p class="my-0">您已選擇以下分類</p>
+                                        <ol class="ps-3 my-0">
+                                            <li>
+                                                訂票／付款／取票／退換票(新) → 規範及作業 → 購票
+                                            </li>
+                                            <li>
+                                                訂票／付款／取票／退換票(新) → 規範及作業 → 購票
+                                            </li>
+
+
+                                        </ol>
+                                    </div>
+
+
+                                </div>
+
+                                <!--分類 end-->
+
+                                <!--產品資訊 start-->
+                                <div class="row col-12 gy-2 gx-2 align-items-center">
+                                    <div class="col-3 required">
+                                        <label for="category" class="col-12 control-label">產品資訊</label>
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>訂票／付款／取票／退換票(新)</option>
+                                            <option>訂票／付款／取票／退換票(新)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required">
+                                        <label for="category" class="col-12 control-label invisible">產品資訊</label>
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>規範及作業</option>
+                                            <option>規範及作業</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required">
+                                        <label for="category" class="col-12 control-label invisible">產品資訊</label>
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>規範及作業</option>
+                                            <option>規範及作業</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required">
+                                        <label for="category" class="col-12 control-label invisible">新增產品資訊</label>
+                                        <button type="button" class="col btn btn-primary my-1">新增產品資訊</button>
+                                    </div>
+
+
+                                    <!--如果新增產品資訊 加入從這開始-->
+                                    <div class="col-3 required gy-0">
+
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>訂票／付款／取票／退換票(新)</option>
+                                            <option>訂票／付款／取票／退換票(新)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required gy-0">
+
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>規範及作業</option>
+                                            <option>規範及作業</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required gy-0">
+
+                                        <select class="form-control" name="category">
+                                            <option selected>請選擇</option>
+                                            <option>規範及作業</option>
+                                            <option>規範及作業</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-3 required gy-0">
+
+                                        <button type="button" class="col btn btn-primary my-1">新增產品資訊</button>
+                                    </div>
+                                    <!--如果新增產品資訊 加入到這結束-->
+                                    <div class="col-auto">
+                                        <p class="my-0">您已選擇以下產品資訊</p>
+                                        <ol class="ps-3 my-0">
+                                            <li>
+                                                訂票／付款／取票／退換票(新) → 規範及作業 → 購票
+                                            </li>
+                                            <li>
+                                                訂票／付款／取票／退換票(新) → 規範及作業 → 購票
+                                            </li>
+
+
+                                        </ol>
+                                    </div>
+
+
+                                </div>
+                                <!--產品資訊 end-->
+
+                                <!--意見來源-->
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="source" class="col-auto control-label">意見來源</label>
+                                        <select class="form-control" id="source" placeholder="意見來源" required>
+                                            <option selected>請選擇來源</option>
+                                            <option value="客服">客服</option>
+                                            <option value="列車">列車</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <!--回覆方式-->
+                                <div class="row col-md-6 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="reply" class="col-12 control-label">回覆方式</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">電話聯絡</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">電子信箱</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">郵寄</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">毋需回覆</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+                                <!--調查回覆-->
+                                <div class="row col-12 gy-2 gx-2">
+                                    <div class="col required">
+                                        <label for="invesReply" class="col-12 control-label">調查回覆</label>
+                                        <div class="accordion bg-white" id="accordionPanelsStayOpenExample">
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="panelsStayOpen-headingOne">
+                                                    <button class="accordion-button shadow-none fs-5" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseOne"
+                                                        aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                        顧客關係部(CRD)
+                                                    </button>
+                                                </p>
+                                                <div id="panelsStayOpen-collapseOne"
+                                                    class="accordion-collapse collapse show"
+                                                    aria-labelledby="panelsStayOpen-headingOne">
+                                                    <div class="accordion-body row">
+                                                        <div class="col-12 fw-bold">
+                                                            請承辦人員調查log，查詢是否異常？
+                                                        </div>
+                                                        <div class="col-12 pt-1">
+                                                            經查詢系統log，查無異常
+                                                        </div>
+                                                        <div class="col-auto fs-6 text-black-50">邱小元</div>
+                                                        <div class="col-auto fs-6 text-black-50">2022/04/12
+                                                            15:20:20
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="panelsStayOpen-headingTwo">
+                                                    <button class="accordion-button shadow-none collapsed fs-5"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseTwo"
+                                                        aria-expanded="false"
+                                                        aria-controls="panelsStayOpen-collapseTwo">
+                                                        資訊處(ITD)<span class="alert alert-danger p-1 my-0 ms-1 fs-6"
+                                                            role="alert">
+                                                            尚未回覆
+                                                        </span>
+                                                    </button>
+                                                </p>
+                                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="panelsStayOpen-headingTwo">
+                                                    <div class="accordion-body">
+                                                        <div class="col-12 fw-bold">
+                                                            請承辦人員調查log，查詢是否異常？
+                                                        </div>
+                                                        <!-- <div class="col-12 pt-1">
+                                                                    這裡是回覆內容alsfjlasjlsdf
+                                                                </div>
+                                                                <div class="col-auto fs-6 text-black-50">邱小元</div>
+                                                                    <div class="col-auto fs-6 text-black-50">2022/04/12 15:20:20
+                                                                    </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <p class="accordion-header" id="panelsStayOpen-headingThree">
+                                                    <button class="accordion-button shadow-none collapsed fs-5"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#panelsStayOpen-collapseThree"
+                                                        aria-expanded="false"
+                                                        aria-controls="panelsStayOpen-collapseThree">
+                                                        台北車站(TPE)
+                                                    </button>
+                                                </p>
+                                                <div id="panelsStayOpen-collapseThree"
+                                                    class="accordion-collapse collapse"
+                                                    aria-labelledby="panelsStayOpen-headingThree">
+                                                    <div class="accordion-body">
+                                                        <strong>This is the third item's accordion
+                                                            body.</strong> It is
+                                                        hidden by default, until the collapse plugin adds the
+                                                        appropriate classes that we use to style each element.
+                                                        These
+                                                        classes control the overall appearance, as well as the
+                                                        showing
+                                                        and hiding via CSS transitions. You can modify any of
+                                                        this with
+                                                        custom CSS or overriding our default variables. It's
+                                                        also worth
+                                                        noting that just about any HTML can go within the
+                                                        <code>.accordion-body</code>, though the transition does
+                                                        limit
+                                                        overflow.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--潤飾內容-->
+                                <div class="row col-12 gy-2 gx-2">
+                                    <div class="col">
+                                        <label for="draft" class="col-12 control-label">潤飾內容</label>
+                                        <textarea type="text" class="form-control" id="draft" name="draft"
+                                            placeholder="請輸入內容">我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~</textarea>
+                                    </div>
+                                </div>
+
+
+                                <!--回覆內容-->
+                                <div class="row col-12 gy-2 gx-2">
+                                    <div class="col">
+                                        <label for="finalReply" class="col-12 control-label">回覆內容</label>
+                                        <textarea type="text" class="form-control" id="finalReply" name="finalReply"
+                                            placeholder="請輸入回覆內容">我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~我的意見~</textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-grid gap-2 d-flex justify-content-center">
+                                    <button type="button" class="btn btn-primary my-3">更新</button>
+                                    <button type="button" class="btn btn-primary my-3">取消</button>
+                                </div>
+
+                            </div>
+                            <!--案件內容 end-->
+
+                            <!--上傳檔案 start-->
+                            <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                                <p class="fs-2 fw-bold pb-3 lh-1 ">上傳檔案</p>
+                                <div class="col-12 gy-2 gx-2 input-group">
+                                    <input type="file" class="form-control" id="inputGroupFile04"
+                                        aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                                    <button class="btn btn-primary" type="button"
+                                        id="inputGroupFileAddon04">確認上傳</button>
+                                </div>
+                                <div class="row col gy-2 gx-1 required">
+
+                                    <label for="organizer" class="col-sm-3 control-label">已上傳附件</label>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>上傳日期</th>
+                                                <th>檔案名稱</th>
+                                                <th>上傳者</th>
+                                                <th>上傳來源</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</th>
+                                                <td>2022/04/01 10:23:25</td>
+                                                <td>高鐵車票.jpg</td>
+                                                <td>顧客</td>
+                                                <td>數位客服(AICS)</td>
+                                                <td><button type="button" class="btn btn-primary">刪除</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</th>
+                                                <td>2022/04/03 10:23:25</td>
+                                                <td>ETS.jpg</td>
+                                                <td>顧客管理課/劉筱珮</td>
+                                                <td>顧客意見管理系統(CVM)</td>
+                                                <td><button type="button" class="btn btn-primary">刪除</button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>3</th>
+                                                <td>2022/04/01 10:23:25</td>
+                                                <td>高鐵車票.jpg</td>
+                                                <td>顧客</td>
+                                                <td>WWW</td>
+                                                <td><button type="button" class="btn btn-primary">刪除</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+
+
+                            </div>
+                            <!--上傳檔案 end-->
+
+                            <!--備註內容 start-->
+                            <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                                <p class="fs-2 fw-bold pb-3 lh-1 ">備註內容</p>
+                                <!--新增備註內容-->
+                                <div class="row col-12 gy-2 gx-2">
+                                    <div class="col row gx-0">
+                                        <label for="newRemark" class="col-auto control-label pe-2">新增備註</label>
+                                        <div class="col-auto form-check">
+
+                                            <input class="form-check-input" type="checkbox" id="special" value="特殊案件">
+                                            <label class="form-check-label" for="special">特殊案件</label>
+                                        </div>
+                                        
+                                    </div>
+                                    <textarea type="text" class="form-control" id="newRemark" name="newRemark"
+                                            placeholder="請輸入備註內容"></textarea>
+                                </div>
+
+                                <div class="col-12 d-grid gap-2 d-flex justify-content-center">
+                                    <button type="button" class="btn btn-primary my-3">確認新增</button>
+
+                                </div>
+                                <div class="row col gy-2 gx-1 required">
+
+                                    <label for="organizer" class="col-sm-3 control-label">備註內容</label>
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>備註內容</th>
+                                                <th>部門名稱/人員</th>
+                                                <th>新增日期</th>
+                                                <th>特殊案件</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</th>
+                                                <td>備註內容備註內容備註內容備註內容備註內容備註內容備註內容備註內容</td>
+                                                <td>顧客管理課/劉筱珮</td>
+                                                <td>2022/04/03 10:23:25</td>
+                                                <td><input class="form-check-input" type="checkbox" id="special" value="特殊案件">
+                                                </td>
+                                                <td><button type="button" class="btn btn-primary" disabled>更新</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</th>
+                                                <td class="text-danger">
+                                                    備註內容備註內容備註內容備註內容備註內容備註內容備註內容備註內容
+                                                </td>
+                                                <td>顧客管理課/劉筱珮</td>
+                                                <td>2022/04/03 10:23:25</td>
+                                                <td><input class="form-check-input" type="checkbox" id="special" value="特殊案件" checked>
+                                                </td>
+                                                <td><button type="button" class="btn btn-primary">更新</button>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+
+
+                            </div>
+                            <!--備註內容 end-->
+
+                            <!--快速結案 start-->
+                            <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                                <p class="fs-2 fw-bold pb-3 lh-1 ">快速結案</p>
+                                <!--新增結案說明-->
+                                <div class="row col-12 gy-2 gx-2">
+                                    <div class="col row gx-0">
+                                        <label for="closeNote" class="col-auto control-label pe-2">結案說明</label>
+                                        <div class="col-auto form-check">
+
+                                            <input class="form-check-input" type="checkbox" id="offReport" value="不列入報表">
+                                            <label class="form-check-label" for="offReport">不列入報表</label>
+                                        </div>
+                                        
+                                    </div>
+                                    <textarea type="text" class="form-control" id="closeNote" name="closeNote"
+                                            placeholder="請輸入結案說明"></textarea>
+                                </div>
+
+                                <div class="col-12 d-grid gap-2 d-flex justify-content-center">
+                                    <button type="button" class="btn btn-primary my-3">確認結案</button>
+
+                                </div>
+                               
+
+
+
+                            </div>
+                            <!--備註內容 end-->
+                        </div>
+                    </form>
+                </div>
+                <!--案件資訊 TAB 結束-------------------------------------------------------->
+
+
+
+
+
+
+                <!--窗口通知(外單位) TAB 開始 ------------------------------------------------>
+
+                <div class="tab-pane fade" id="nav-window" role="tabpanel" aria-labelledby="nav-window-tab">
+                    <form class="form-horizontal">
+                        <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                            <p class="fs-2 fw-bold pb-3 lh-1 ">聯繫窗口</p>
+                            <div class="row gy-2 gx-2">
+                                
+                                <div class="col-12 form-check">
+                                    <label class="form-check-label" for="">外單位窗口（無系統權限）</label>
+                                    <input class="form-check-input" type="checkbox" id="offReport" value="不列入報表">
+                                    
+                                </div>
+                                <div class="col-12 row gy-4 gx-2 required">
+                                    <label for="inputReceiver" class="col-lg-1 col-md-2 control-label row align-items-center">收件人</label>
+                                    <div class="row col-lg-11 col-md-10">
+                                        <div class="col-4 col-lg-2 pb-1 ps-0">
+
+                                            <select class="form-control form-control-sm" name="selectUnit">
+                                                <option selected>請選擇聯繫單位</option>
+                                                <option value="BND/品牌暨傳播部">BND/品牌暨傳播部</option>
+                                                <option value="CRS/公共服務課">CRS/公共服務課</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4 col-lg-2 pb-1 ps-0">
+    
+                                            <select class="form-control form-control-sm" name="selectWindow">
+                                                <option selected>請選擇聯繫窗口</option>
+                                                <option value="窗口/黃怡芬">窗口/黃怡芬</option>
+                                                <option value="代理人/鄭君儀">代理人/鄭君儀</option>
+                                            </select>
+                                        </div>
+                                       
+                                        <div class="col-3 col-lg-2 pb-1 ps-0">
+    
+                                            <button type="button" class="col btn btn-primary btn-sm">新增</button>
+                                        </div>
+                                        <input type="text" class="col-12 form-control" id="inputReceiver" placeholder="">
+                                      </div>
+                                </div>
+                                <div class="col-12 row gy-3 gx-2">
+                                    <label for="inputccer" class="col-lg-1 col-md-2 control-label row align-items-center">副知</label>
+                                    <div class="row col-lg-11 col-md-10">
+                                        <div class="col-4 col-lg-2 pb-1 ps-0">
+
+                                            <select class="form-control form-control-sm" name="selectUnit">
+                                                <option selected>請選擇聯繫單位</option>
+                                                <option value="BND/品牌暨傳播部">BND/品牌暨傳播部</option>
+                                                <option value="CRS/公共服務課">CRS/公共服務課</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4 col-lg-2 pb-1 ps-0">
+    
+                                            <select class="form-control form-control-sm" name="selectWindow">
+                                                <option selected>請選擇聯繫窗口</option>
+                                                <option value="窗口/黃怡芬">窗口/黃怡芬</option>
+                                                <option value="代理人/鄭君儀">代理人/鄭君儀</option>
+                                            </select>
+                                        </div>
+                                       
+                                        <div class="col-3 col-lg-2 pb-1 ps-0">
+    
+                                            <button type="button" class="col btn btn-primary btn-sm">新增</button>
+                                        </div>
+                                        <input type="text" class="col-12 form-control" id="inputReceiver" placeholder="">
+                                      </div>
+                                </div>
+                                <div class="col-12 row gy-3 gx-2">
+                                    <label for="inputContent" class="col-md-1 control-label row align-items-center">內容</label>
+                                    <div class="row col-md-11">
+                                        
+                                        <textarea class="col-12 form-control" id="inputContentTextarea" placeholder="請輸入內容"></textarea>
+                                      </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                            <p class="fs-2 fw-bold pb-3 lh-1 ">窗口聯繫歷程</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>收件人</th>
+                                        <th>副知</th>
+                                        <th>信件內容</th>
+                                        <th>寄送日期</th>
+                                        <th>寄送結果</th>
+                                        <th data-breakpoints="all">回覆人</th>
+                                        <th data-breakpoints="all">回覆內容</th>
+                                        <th data-breakpoints="all">附件</th>
+                                        <th data-breakpoints="all">回覆日期</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</th>
+                                        <td>黃怡芬</td>
+                                        <td>江信助; 徐逸叡; 吳易漢</td>
+                                        <td>請協助提供案件相關內容</td>
+                                        <td>2022/07/15 15:04:39</td>
+                                        <td>成功</td>
+                                        <td>黃怡芬</td>
+                                        <td>已提供附件</td>
+                                        <td>證據1.jpg</td>
+                                        <td>2022/07/16 10:54:23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</th>
+                                        <td>黃怡芬</td>
+                                        <td>江信助; 徐逸叡; 吳易漢</td>
+                                        <td>請協助提供案件相關內容</td>
+                                        <td>2022/07/15 15:04:39</td>
+                                        <td>成功</td>
+                                        <td>黃怡芬</td>
+                                        <td>已提供附件</td>
+                                        <td>證據1.jpg</td>
+                                        <td>2022/07/16 10:54:23</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                        
+                      
+                    </form>
+                </div>
+
+
+
+
+
+            </div>
+
+        </section>
+        <footer class="container-fluid footer">
+            <p class="m-0">Copyright © 2022 THSRC. All rights reserved.</p>
+        </footer>
+        
+    </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    <script src="js/footable/footable.js"></script>
+    <script src="js/collapsed-sidebar.js"></script>
+    
+    <script>
+        jQuery(function($){
+	$('.table').footable({
+        // "editing": {
+		// 	"enabled": true
+		// },
+        // "filtering": {
+		// 	"enabled": true
+		// },
+		"sorting": {
+			"enabled": true,
+            "sorted": true
+		}
+	});
+});
+    </script>
+
+
+</body>
+
+</html>
