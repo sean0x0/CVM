@@ -1274,6 +1274,10 @@
                                         <textarea class="col-12 form-control" id="inputContentTextarea" placeholder="請輸入內容"></textarea>
                                       </div>
                                 </div>
+                                <div class="col-12 d-grid gap-2 d-flex justify-content-center">
+                                    <button type="button" class="btn btn-primary my-3">確認寄出</button>
+    
+                                </div>
 
 
                             </div>
@@ -1289,6 +1293,7 @@
                                         <th>收件人</th>
                                         <th>副知</th>
                                         <th>信件內容</th>
+                                        <th>寄件人</th>
                                         <th>寄送日期</th>
                                         <th>寄送結果</th>
                                         <th data-breakpoints="all">回覆人</th>
@@ -1302,7 +1307,8 @@
                                         <td>1</th>
                                         <td>黃怡芬</td>
                                         <td>江信助; 徐逸叡; 吳易漢</td>
-                                        <td>請協助提供案件相關內容</td>
+                                        <td style="max-width: 250px;">請協助提供案件相關內容</td>
+                                        <td>劉筱珮</td>
                                         <td>2022/07/15 15:04:39</td>
                                         <td>成功</td>
                                         <td>黃怡芬</td>
@@ -1314,7 +1320,8 @@
                                         <td>2</th>
                                         <td>黃怡芬</td>
                                         <td>江信助; 徐逸叡; 吳易漢</td>
-                                        <td>請協助提供案件相關內容</td>
+                                        <td style="max-width: 250px;">請協助提供案件相關內容</td>
+                                        <td>劉筱珮</td>
                                         <td>2022/07/15 15:04:39</td>
                                         <td>成功</td>
                                         <td>黃怡芬</td>
@@ -1332,6 +1339,127 @@
                       
                     </form>
                 </div>
+                <!--窗口通知(外單位) TAB 結束 ------------------------------------------------>
+
+                <!--信件通知 TAB 開始 ------------------------------------------------>
+
+                <div class="tab-pane fade" id="nav-letter" role="tabpanel" aria-labelledby="nav-letter-tab">
+                    <form class="form-horizontal">
+                        <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                            <p class="fs-2 fw-bold pb-3 lh-1 ">信件通知</p>
+                            <div class="row gy-2 gx-2">
+                             
+                                <div class="col-12 row gy-2 gx-2">
+                                    <label for="inputReceiver" class="col-lg-1 col-md-2 control-label row align-items-center">顧客</label>
+                                    <div class="row col-lg-11 col-md-10">
+                                        
+                                        <input type="text" class="col-12 col-lg-6 form-control" id="inputReceiver" placeholder="">
+                                      </div>
+                                </div>
+                                <div class="col-12 row gy-3 gx-2">
+                                    <label for="inputEmail" class="col-lg-1 col-md-2 control-label row align-items-center">Email</label>
+                                    <div class="row col-lg-11 col-md-10">
+                                        
+                                        <div class="col-6 col-lg-3 ps-0">
+                                            <label class="visually-hidden" for="autoSizingInput">Name</label>
+                                            <input type="email" class="form-control" id="autoSizingInput" placeholder="">
+                                        </div>
+                                        <div class="col-6 col-lg-3 px-0">
+                                            <label class="visually-hidden" for="autoSizingInputGroup"></label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">@</div>
+                                                <input type="email" class="form-control" id="autoSizingInputGroup"
+                                                    placeholder="">
+                                            </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-12 row gy-3 gx-2">
+                                    <label for="inputContent" class="col-md-1 control-label row align-items-center">內容</label>
+                                    <div class="row col-md-11">
+                                        
+                                        <textarea class="col-12 form-control" id="inputContentTextarea" placeholder="請輸入內容"></textarea>
+                                      </div>
+                                </div>
+                                <div class="col-12 row gy-3 gx-2">
+                                    <label for="inputContent" class="col-md-1 control-label row align-items-center">備註</label>
+                                    <div class="row col-md-11">
+                                        <input type="text" class="col-12 form-control" id="inputRemark"
+                                                    placeholder="備註留言給內部的人看, 例如: 請顧客上傳車票資料，請確認檔案後轉入調查類案件">
+                                        
+                                      </div>
+                                </div>
+                                <div class="col-12 d-grid gap-2 d-flex justify-content-center">
+                                    <button type="button" class="btn btn-primary my-3">確認寄出</button>
+    
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                            <p class="fs-2 fw-bold pb-3 lh-1 ">信件通知歷程</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>顧客</th>
+                                        <th>email</th>
+                                        <th data-breakpoints="all">通知內容</th>
+                                        <th>寄件人</th>
+                                        <th>寄送日期</th>
+                                        <th>寄送結果</th>
+                                        <th data-breakpoints="all">備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</th>
+                                        <td>王小明</td>
+                                        <td>abc@gmail.com</td>
+                                        <td>親愛的顧客　您好：
+
+                                            稍早您透過客服反映的意見，須請您提供資料如下：
+                                            1.AAAAAAAAAAA
+                                            2.BBBBBBBBBBB
+                                            
+                                            您可透過此連結直接上傳圖片，或透過數位客服提供資料，謝謝。</td>
+                                        <td>劉筱珮</td>
+                                        <td>2022/07/15 15:04:39</td>
+                                        <td>成功</td>
+                                        <td>請確認檔案後轉入調查案</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>2</th>
+                                        <td>王大明</td>
+                                        <td>def@gmail.com</td>
+                                        <td>親愛的顧客　您好：
+
+                                            稍早您透過客服反映的意見，須請您提供資料如下：
+                                            1.CCCCCCC
+                                            2.DDDDDDDD
+                                            
+                                            您可透過此連結直接上傳圖片，或透過數位客服提供資料，謝謝。</td>
+                                        <td>劉筱珮</td>
+                                        <td>2022/07/18 13:34:24</td>
+                                        <td>成功</td>
+                                        <td>請確認檔案後轉入調查案</td>
+                                        
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            
+
+                        </div>
+                        
+                      
+                    </form>
+                </div>
+                <!--信件通知 TAB 結束 ------------------------------------------------>
 
 
 
@@ -1366,6 +1494,7 @@
         // "filtering": {
 		// 	"enabled": true
 		// },
+        "expandFirst": true,
 		"sorting": {
 			"enabled": true,
             "sorted": true
