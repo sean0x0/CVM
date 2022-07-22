@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/footable/footable.standalone.min.css">
+
+    <!--sidebar-->
+    <link rel="stylesheet" href="css/sidebars.css">
+
+
+
+    <title></title>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom">
+            <!-- Container wrapper -->
+            <div class="container-fluid ">
+
+                <!--collapsed sidebar-->
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <!-- <a href="#">未結案案件</a>
+                    <a href="#">XXXXX</a>
+                    <a href="#">XXXXX</a>
+                    <a href="#">XXXXX</a> -->
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                            您的任務情境
+                          </button>
+                          <div class="collapse show" id="home-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark">新增案件</a></li>
+                                <li><a href="#" class="link-dark">分派案件</a></li>
+                              <li><a href="#" class="link-dark">調查案件</a></li>
+                              <li><a href="#" class="link-dark">回覆案件</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                            Dashboard
+                          </button>
+                          <div class="collapse" id="dashboard-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                              <li><a href="#" class="link-dark">Overview</a></li>
+                              <li><a href="#" class="link-dark">Weekly</a></li>
+                              <li><a href="#" class="link-dark">Monthly</a></li>
+                              <li><a href="#" class="link-dark">Annually</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                            Orders
+                          </button>
+                          <div class="collapse" id="orders-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                              <li><a href="#" class="link-dark">New</a></li>
+                              <li><a href="#" class="link-dark">Processed</a></li>
+                              <li><a href="#" class="link-dark">Shipped</a></li>
+                              <li><a href="#" class="link-dark">Returned</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="border-top my-3"></li>
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                            Account
+                          </button>
+                          <div class="collapse" id="account-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                              <li><a href="#" class="link-dark">New...</a></li>
+                              <li><a href="#" class="link-dark">Profile</a></li>
+                              <li><a href="#" class="link-dark">Settings</a></li>
+                              <li><a href="#" class="link-dark">Sign out</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                </div>
+                <!--collapsed sidebar-->
+                <button class="openbtn" onclick="openNav()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Navbar brand -->
+                <a class="navbar-brand text-center fs-3 fw-bold text-primary" href="#" style="margin-left:110px;">
+                    <!-- <img src="#" height="15"
+                        alt="CVM Logo" loading="lazy" />-->CVM
+                </a>
+                <!-- Toggle button -->
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Icon -->
+                    <a class="text-reset me-3" href="#">
+                        <i class="fa-solid fa-gear"></i>
+                    </a>
+
+                    <!-- Notifications -->
+                    <div class="dropdown">
+                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Avatar -->
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                            id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/CRD.png" class="rounded-circle" height="30" alt="" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <!--Navbar-->
+    <main id="main">
+        <h1 class="text-center mt-5 pb-2 text-primary">Hi <span>Sean</span>, 歡迎使用顧客意見管理系統</h1>
+        <p class="text-center mt-5">請直接搜尋案件</p>
+        
+        <form class="container-xl row justify-content-center mx-auto">
+            <div class="col-xl-2 col-md-3 col-6 px-1"><input class=" form-control" type="search" placeholder="請輸入案件編號" aria-label="Search"></div>
+            <div class=" col-auto px-1"><button class="btn btn-primary" type="submit">快速搜尋</button> or <a href="#" class="text-primary"><u>進階搜尋</u></a></div>
+          </form>
+        <section class="container-xl">
+            
+            <!-- <div class="row">
+                
+                <div class="col-12 col-sm-4 card shadow-light">
+                    <img src="" class="card-img-top w-50 mx-auto" alt="派案">
+                    <div class="card-body">
+                        <p class="fs-4 card-text text-center fw-bold">分派案件</p>
+                    </div>
+                    <ul class="list-group">
+                        <li class="py-1 w-75 mx-auto border-0 list-group-item d-flex justify-content-between align-items-center">
+                            待分派
+                            <span class="badge bg-secondary rounded-pill">14</span>
+                        </li>
+                        <li class="py-1 w-75 mx-auto border-0 list-group-item d-flex justify-content-between align-items-center">
+                            待分派
+                            <span class="badge bg-secondary rounded-pill">2</span>
+                        </li>
+                        <li class="py-1 w-75 mx-auto border-0 list-group-item d-flex justify-content-between align-items-center">
+                            待分派
+                            <span class="badge bg-secondary rounded-pill">1</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-4 card shadow-light">
+                    <img src="" class="card-img-top w-50 mx-auto" alt="調查">
+                    <div class="card-body">
+                        <p class="fs-4 card-text text-center fw-bold">調查案件</p>
+                    </div>
+                    <ul class="list-group">
+                        <li class="py-1 w-75 mx-auto border-0 list-group-item d-flex justify-content-between align-items-center">
+                            調查中
+                            <span class="badge bg-secondary rounded-pill">14</span>
+                        </li>
+                        <li class="py-1 w-75 mx-auto border-0 list-group-item d-flex justify-content-between align-items-center">
+                            調查中
+                            <span class="badge bg-secondary rounded-pill">2</span>
+                        </li>
+                        <li class="py-1 w-75 mx-auto border-0 list-group-item d-flex justify-content-between align-items-center">
+                            調查中
+                            <span class="badge bg-secondary rounded-pill">1</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-4 card shadow-light">
+                    <img src="" class="card-img-top w-50 mx-auto" alt="回覆">
+                    <div class="card-body">
+                        <p class="fs-4 card-text text-center fw-bold">回覆案件</p>
+                    </div>
+                    <ul class="list-group">
+                        <li class="py-1 w-75 mx-auto border-0 list-group-item d-flex justify-content-between align-items-center">
+                            待回覆
+                            <span class="badge bg-secondary rounded-pill">14</span>
+                        </li>
+                        <li class="py-1 w-75 mx-auto border-0 list-group-item d-flex justify-content-between align-items-center">
+                            待去電
+                            <span class="badge bg-secondary rounded-pill">2</span>
+                        </li>
+                        <li class="py-1 w-75 mx-auto border-0 list-group-item d-flex justify-content-between align-items-center">
+                            結案備查
+                            <span class="badge bg-secondary rounded-pill">1</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+            </div> -->
+            <div class="row mx-3 mx-md-0 gx-5 align-items-center mt-5">
+              <p class="col-12 text-center">或 選擇您要進行的任務情境</p>
+              
+                <button type="button" class="btn rounded-circle bg-white shadow-light border border-primary CTA">
+                  <img src="img/create.svg" class="card-img-top ms-auto" alt="新增案件" style="width: 40px;">
+                  
+                  
+              </button>
+              
+              <div class="col-12 col-md-6 col-lg-4 pt-2">
+                    <div class="p-1 p-lg-3 bg-white row rounded-3 shadow-light">
+                        <button type="button" class="col-auto btn">
+                            <img src="img/assign.svg" class="card-img-top w-50 ms-auto" alt="派案">
+                            <p class="mb-0 pt-2 fs-3 fw-bold">分派案件</p>
+                            
+                        </button>
+                        <div class="list-group col-auto d-flex w-50 ms-auto my-auto">
+                            <a href="#" class="py-1 w-100 mx-auto border-0 list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                待分派
+                                <span class="badge bg-secondary rounded-pill">14</span>
+                            </a>
+                            <a href="#" class="py-1 w-100  mx-auto border-0 list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                待分派
+                                <span class="badge bg-secondary rounded-pill">2</span>
+                            </a>
+                            <a href="#" class="py-1 w-100  mx-auto border-0 list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                待分派
+                                <span class="badge bg-secondary rounded-pill">1</span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 pt-2">
+                    <div class="p-1 p-lg-3 bg-white row rounded-3 shadow-light">
+                        <button type="button" class="col-auto btn">
+                            <img src="img/investigate.svg" class="card-img-top w-50 ms-auto" alt="派案">
+                            <p class="mb-0 pt-2 fs-3 fw-bold">調查案件</p>
+                            
+                        </button>
+                        <div class="list-group col-auto d-flex w-50 ms-auto my-auto">
+                            <a href="#" class="py-1 w-100 mx-auto border-0 list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                待分派
+                                <span class="badge bg-secondary rounded-pill">14</span>
+                            </a>
+                            <a href="#" class="py-1 w-100  mx-auto border-0 list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                待分派
+                                <span class="badge bg-secondary rounded-pill">2</span>
+                            </a>
+                            <a href="#" class="py-1 w-100  mx-auto border-0 list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                待分派
+                                <span class="badge bg-secondary rounded-pill">1</span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 pt-2">
+                    <div class="p-1 p-lg-3 bg-white row rounded-3 shadow-light">
+                        <button type="button" class="col-auto btn">
+                            <img src="img/reply.svg" class="card-img-top w-50 ms-auto" alt="派案">
+                            <p class="mb-0 pt-2 fs-3 fw-bold">回覆案件</p>
+                            
+                        </button>
+                        <div class="list-group col-auto d-flex w-50 ms-auto my-auto">
+                            <a href="#" class="py-1 w-100 mx-auto border-0 list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                待分派
+                                <span class="badge bg-secondary rounded-pill">14</span>
+                            </a>
+                            <a href="#" class="py-1 w-100  mx-auto border-0 list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                待分派
+                                <span class="badge bg-secondary rounded-pill">2</span>
+                            </a>
+                            <a href="#" class="py-1 w-100  mx-auto border-0 list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                待分派
+                                <span class="badge bg-secondary rounded-pill">1</span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <div class="feature col rounded-3 bg-white shadow-light py-2">
+                  <div class="w-25">
+                    <img src="img/assign.svg" class="card-img-top w-50 ms-auto" alt="派案">
+                  </div>
+                  <h2>Featured title</h2>
+                  <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                  <a href="#" class="icon-link">
+                    Call to action
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+                  </a>
+                </div>
+                <div class="feature col rounded-3 bg-white shadow-light py-2">
+                  <div class="w-25">
+                    <img src="img/assign.svg" class="card-img-top w-50 ms-auto" alt="派案">
+                  </div>
+                  <h2>Featured title</h2>
+                  <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                  <a href="#" class="icon-link">
+                    Call to action
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+                  </a>
+                </div>
+                <div class="feature col rounded-3 bg-white shadow-light py-2">
+                  <div class="w-25">
+                    <img src="img/assign.svg" class="card-img-top w-50 ms-auto" alt="派案">
+                  </div>
+                  <h2>Featured title</h2>
+                  <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                  <a href="#" class="icon-link">
+                    Call to action
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+                  </a>
+                </div>
+              </div> -->
+              <!-- <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <div class="col d-flex align-items-start">
+                  <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                    <img src="img/assign.svg" class="card-img-top w-75 mx-auto" alt="派案">
+                  </div>
+                  <div>
+                    <h2>分派案件</h2>
+                    
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <div class="list-group col-auto d-flex ms-auto">
+                        <a href="#" class="border-bottom w-50 py-1 ps-0 me-auto border-0 bg-transparent list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            待分派
+                            <span class="badge bg-secondary rounded-pill">14</span>
+                        </a>
+                        <a href="#" class="border-bottom w-50 py-1 ps-0 me-auto border-0 bg-transparent list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            待分派
+                            <span class="badge bg-secondary rounded-pill">2</span>
+                        </a>
+                        <a href="#" class="border-bottom w-50 py-1 ps-0 me-auto border-0 bg-transparent list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            待分派
+                            <span class="badge bg-secondary rounded-pill">1</span>
+                        </a>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                  <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
+                  </div>
+                  <div>
+                    <h2>Featured title</h2>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="btn btn-primary">
+                      Primary button
+                    </a>
+                  </div>
+                </div>
+                <div class="col d-flex align-items-start">
+                  <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                    <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
+                  </div>
+                  <div>
+                    <h2>Featured title</h2>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="btn btn-primary">
+                      Primary button
+                    </a>
+                  </div>
+                </div>
+              </div> -->
+
+        </section>
+
+
+    </main>
+    <footer class="container-fluid footer">
+        <p class="m-0">Copyright © 2022 THSRC. All rights reserved.</p>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    <script src="js/footable/footable.js"></script>
+     <!--sidebar-->
+    <script src="js/collapsed-sidebar.js"></script>
+   
+    <script src="js/sidebars.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $('.table').footable({
+                // "editing": {
+                // 	"enabled": true
+                // },
+                // "filtering": {
+                // 	"enabled": true
+                // },
+                "expandFirst": true,
+                "sorting": {
+                    "enabled": true,
+                    "sorted": true
+                }
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
