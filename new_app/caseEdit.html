@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/app.min.css">
     <link rel="stylesheet" href="css/footable/footable.standalone.min.css">
+    <!--sidebar-->
+    <link rel="stylesheet" href="css/sidebars.css">
 
 
 
@@ -27,7 +29,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom">
             <!-- Container wrapper -->
             <div class="container-fluid ">
-                
+
                 <!--collapsed sidebar-->
                 <div id="mySidebar" class="sidebar">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -35,11 +37,11 @@
                     <a href="#">XXXXX</a>
                     <a href="#">XXXXX</a>
                     <a href="#">XXXXX</a>
-                  </div>
+                </div>
                 <!--collapsed sidebar-->
                 <button class="openbtn" onclick="openNav()">
                     <i class="fas fa-bars"></i>
-                </button>  
+                </button>
                 <!-- Navbar brand -->
                 <a class="navbar-brand text-center fs-3 fw-bold text-primary" href="#" style="margin-left:110px;">
                     <!-- <img src="#" height="15"
@@ -98,7 +100,7 @@
         <!-- Navbar -->
     </header>
     <!--Navbar-->
-    <main>
+    <main id="main">
 
         <section class="container-xl my-4 ">
 
@@ -110,7 +112,7 @@
                     </p>
                     <p class="col-12 fs-5 m-0 p-0 g-0 text-muted">暫存類案件編號：<span>T202108170046</span></p>
 
-                    
+
                 </div>
             </div>
             <!--內容頁籤-->
@@ -354,7 +356,8 @@
                                         <label for="email" class="col-12 control-label">電子信箱</label>
                                         <div class="col-6 gy-0">
                                             <label class="visually-hidden" for="autoSizingInput">Name</label>
-                                            <input type="email" class="form-control" id="autoSizingInput" placeholder="">
+                                            <input type="email" class="form-control" id="autoSizingInput"
+                                                placeholder="">
                                         </div>
                                         <div class="col-6 gy-0">
                                             <label class="visually-hidden" for="autoSizingInputGroup"></label>
@@ -1104,10 +1107,10 @@
                                             <input class="form-check-input" type="checkbox" id="special" value="特殊案件">
                                             <label class="form-check-label" for="special">特殊案件</label>
                                         </div>
-                                        
+
                                     </div>
                                     <textarea type="text" class="form-control" id="newRemark" name="newRemark"
-                                            placeholder="請輸入備註內容"></textarea>
+                                        placeholder="請輸入備註內容"></textarea>
                                 </div>
 
                                 <div class="col-12 d-grid gap-2 d-flex justify-content-center">
@@ -1134,7 +1137,8 @@
                                                 <td>備註內容備註內容備註內容備註內容備註內容備註內容備註內容備註內容</td>
                                                 <td>顧客管理課/劉筱珮</td>
                                                 <td>2022/04/03 10:23:25</td>
-                                                <td><input class="form-check-input" type="checkbox" id="special" value="特殊案件">
+                                                <td><input class="form-check-input" type="checkbox" id="special"
+                                                        value="特殊案件">
                                                 </td>
                                                 <td><button type="button" class="btn btn-primary" disabled>更新</button>
                                                 </td>
@@ -1146,7 +1150,8 @@
                                                 </td>
                                                 <td>顧客管理課/劉筱珮</td>
                                                 <td>2022/04/03 10:23:25</td>
-                                                <td><input class="form-check-input" type="checkbox" id="special" value="特殊案件" checked>
+                                                <td><input class="form-check-input" type="checkbox" id="special"
+                                                        value="特殊案件" checked>
                                                 </td>
                                                 <td><button type="button" class="btn btn-primary">更新</button>
                                                 </td>
@@ -1171,20 +1176,21 @@
                                         <label for="closeNote" class="col-auto control-label pe-2">結案說明</label>
                                         <div class="col-auto form-check">
 
-                                            <input class="form-check-input" type="checkbox" id="offReport" value="不列入報表">
+                                            <input class="form-check-input" type="checkbox" id="offReport"
+                                                value="不列入報表">
                                             <label class="form-check-label" for="offReport">不列入報表</label>
                                         </div>
-                                        
+
                                     </div>
                                     <textarea type="text" class="form-control" id="closeNote" name="closeNote"
-                                            placeholder="請輸入結案說明"></textarea>
+                                        placeholder="請輸入結案說明"></textarea>
                                 </div>
 
                                 <div class="col-12 d-grid gap-2 d-flex justify-content-center">
                                     <button type="button" class="btn btn-primary my-3">確認結案</button>
 
                                 </div>
-                               
+
 
 
 
@@ -1196,10 +1202,6 @@
                 <!--案件資訊 TAB 結束-------------------------------------------------------->
 
 
-
-
-
-
                 <!--窗口通知(外單位) TAB 開始 ------------------------------------------------>
 
                 <div class="tab-pane fade" id="nav-window" role="tabpanel" aria-labelledby="nav-window-tab">
@@ -1207,14 +1209,15 @@
                         <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
                             <p class="fs-2 fw-bold pb-3 lh-1 ">聯繫窗口</p>
                             <div class="row gy-2 gx-2">
-                                
+
                                 <div class="col-12 form-check">
                                     <label class="form-check-label" for="">外單位窗口（無系統權限）</label>
                                     <input class="form-check-input" type="checkbox" id="offReport" value="不列入報表">
-                                    
+
                                 </div>
                                 <div class="col-12 row gy-4 gx-2 required">
-                                    <label for="inputReceiver" class="col-lg-1 col-md-2 control-label row align-items-center">收件人</label>
+                                    <label for="inputReceiver"
+                                        class="col-lg-1 col-md-2 control-label row align-items-center">收件人</label>
                                     <div class="row col-lg-11 col-md-10">
                                         <div class="col-4 col-lg-2 pb-1 ps-0">
 
@@ -1225,23 +1228,25 @@
                                             </select>
                                         </div>
                                         <div class="col-4 col-lg-2 pb-1 ps-0">
-    
+
                                             <select class="form-control form-control-sm" name="selectWindow">
                                                 <option selected>請選擇聯繫窗口</option>
                                                 <option value="窗口/黃怡芬">窗口/黃怡芬</option>
                                                 <option value="代理人/鄭君儀">代理人/鄭君儀</option>
                                             </select>
                                         </div>
-                                       
+
                                         <div class="col-3 col-lg-2 pb-1 ps-0">
-    
+
                                             <button type="button" class="col btn btn-primary btn-sm">新增</button>
                                         </div>
-                                        <input type="text" class="col-12 form-control" id="inputReceiver" placeholder="">
-                                      </div>
+                                        <input type="text" class="col-12 form-control" id="inputReceiver"
+                                            placeholder="">
+                                    </div>
                                 </div>
                                 <div class="col-12 row gy-3 gx-2">
-                                    <label for="inputccer" class="col-lg-1 col-md-2 control-label row align-items-center">副知</label>
+                                    <label for="inputccer"
+                                        class="col-lg-1 col-md-2 control-label row align-items-center">副知</label>
                                     <div class="row col-lg-11 col-md-10">
                                         <div class="col-4 col-lg-2 pb-1 ps-0">
 
@@ -1252,31 +1257,34 @@
                                             </select>
                                         </div>
                                         <div class="col-4 col-lg-2 pb-1 ps-0">
-    
+
                                             <select class="form-control form-control-sm" name="selectWindow">
                                                 <option selected>請選擇聯繫窗口</option>
                                                 <option value="窗口/黃怡芬">窗口/黃怡芬</option>
                                                 <option value="代理人/鄭君儀">代理人/鄭君儀</option>
                                             </select>
                                         </div>
-                                       
+
                                         <div class="col-3 col-lg-2 pb-1 ps-0">
-    
+
                                             <button type="button" class="col btn btn-primary btn-sm">新增</button>
                                         </div>
-                                        <input type="text" class="col-12 form-control" id="inputReceiver" placeholder="">
-                                      </div>
+                                        <input type="text" class="col-12 form-control" id="inputReceiver"
+                                            placeholder="">
+                                    </div>
                                 </div>
                                 <div class="col-12 row gy-3 gx-2">
-                                    <label for="inputContent" class="col-md-1 control-label row align-items-center">內容</label>
+                                    <label for="inputContent"
+                                        class="col-md-1 control-label row align-items-center">內容</label>
                                     <div class="row col-md-11">
-                                        
-                                        <textarea class="col-12 form-control" id="inputContentTextarea" placeholder="請輸入內容"></textarea>
-                                      </div>
+
+                                        <textarea class="col-12 form-control" id="inputContentTextarea"
+                                            placeholder="請輸入內容"></textarea>
+                                    </div>
                                 </div>
                                 <div class="col-12 d-grid gap-2 d-flex justify-content-center">
                                     <button type="button" class="btn btn-primary my-3">確認寄出</button>
-    
+
                                 </div>
 
 
@@ -1335,8 +1343,8 @@
 
 
                         </div>
-                        
-                      
+
+
                     </form>
                 </div>
                 <!--窗口通知(外單位) TAB 結束 ------------------------------------------------>
@@ -1348,21 +1356,25 @@
                         <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
                             <p class="fs-2 fw-bold pb-3 lh-1 ">信件通知</p>
                             <div class="row gy-2 gx-2">
-                             
+
                                 <div class="col-12 row gy-2 gx-2">
-                                    <label for="inputReceiver" class="col-lg-1 col-md-2 control-label row align-items-center">顧客</label>
+                                    <label for="inputReceiver"
+                                        class="col-lg-1 col-md-2 control-label row align-items-center">顧客</label>
                                     <div class="row col-lg-11 col-md-10">
-                                        
-                                        <input type="text" class="col-12 col-lg-6 form-control" id="inputReceiver" placeholder="">
-                                      </div>
+
+                                        <input type="text" class="col-12 col-lg-6 form-control" id="inputReceiver"
+                                            placeholder="">
+                                    </div>
                                 </div>
                                 <div class="col-12 row gy-3 gx-2">
-                                    <label for="inputEmail" class="col-lg-1 col-md-2 control-label row align-items-center">Email</label>
+                                    <label for="inputEmail"
+                                        class="col-lg-1 col-md-2 control-label row align-items-center">Email</label>
                                     <div class="row col-lg-11 col-md-10">
-                                        
+
                                         <div class="col-6 col-lg-3 ps-0">
                                             <label class="visually-hidden" for="autoSizingInput">Name</label>
-                                            <input type="email" class="form-control" id="autoSizingInput" placeholder="">
+                                            <input type="email" class="form-control" id="autoSizingInput"
+                                                placeholder="">
                                         </div>
                                         <div class="col-6 col-lg-3 px-0">
                                             <label class="visually-hidden" for="autoSizingInputGroup"></label>
@@ -1372,26 +1384,29 @@
                                                     placeholder="">
                                             </div>
                                         </div>
-                                      </div>
+                                    </div>
                                 </div>
                                 <div class="col-12 row gy-3 gx-2">
-                                    <label for="inputContent" class="col-md-1 control-label row align-items-center">內容</label>
+                                    <label for="inputContent"
+                                        class="col-md-1 control-label row align-items-center">內容</label>
                                     <div class="row col-md-11">
-                                        
-                                        <textarea class="col-12 form-control" id="inputContentTextarea" placeholder="請輸入內容"></textarea>
-                                      </div>
+
+                                        <textarea class="col-12 form-control" id="inputContentTextarea"
+                                            placeholder="請輸入內容"></textarea>
+                                    </div>
                                 </div>
                                 <div class="col-12 row gy-3 gx-2">
-                                    <label for="inputContent" class="col-md-1 control-label row align-items-center">備註</label>
+                                    <label for="inputContent"
+                                        class="col-md-1 control-label row align-items-center">備註</label>
                                     <div class="row col-md-11">
                                         <input type="text" class="col-12 form-control" id="inputRemark"
-                                                    placeholder="備註留言給內部的人看, 例如: 請顧客上傳車票資料，請確認檔案後轉入調查類案件">
-                                        
-                                      </div>
+                                            placeholder="備註留言給內部的人看, 例如: 請顧客上傳車票資料，請確認檔案後轉入調查類案件">
+
+                                    </div>
                                 </div>
                                 <div class="col-12 d-grid gap-2 d-flex justify-content-center">
                                     <button type="button" class="btn btn-primary my-3">確認寄出</button>
-    
+
                                 </div>
 
 
@@ -1424,13 +1439,13 @@
                                             稍早您透過客服反映的意見，須請您提供資料如下：
                                             1.AAAAAAAAAAA
                                             2.BBBBBBBBBBB
-                                            
+
                                             您可透過此連結直接上傳圖片，或透過數位客服提供資料，謝謝。</td>
                                         <td>劉筱珮</td>
                                         <td>2022/07/15 15:04:39</td>
                                         <td>成功</td>
                                         <td>請確認檔案後轉入調查案</td>
-                                        
+
                                     </tr>
                                     <tr>
                                         <td>2</th>
@@ -1441,25 +1456,152 @@
                                             稍早您透過客服反映的意見，須請您提供資料如下：
                                             1.CCCCCCC
                                             2.DDDDDDDD
-                                            
+
                                             您可透過此連結直接上傳圖片，或透過數位客服提供資料，謝謝。</td>
                                         <td>劉筱珮</td>
                                         <td>2022/07/18 13:34:24</td>
                                         <td>成功</td>
                                         <td>請確認檔案後轉入調查案</td>
-                                        
+
                                     </tr>
 
                                 </tbody>
                             </table>
-                            
+
 
                         </div>
-                        
-                      
+
+
                     </form>
                 </div>
                 <!--信件通知 TAB 結束 ------------------------------------------------>
+
+                <!--外播紀錄 TAB 開始 ------------------------------------------------>
+
+                <div class="tab-pane fade" id="nav-callout" role="tabpanel" aria-labelledby="nav-callout-tab">
+                    <form class="form-horizontal">
+
+
+                        <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                            <p class="fs-2 fw-bold pb-3 lh-1 ">外撥紀錄</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>外撥時間</th>
+                                        <th>說明</th>
+                                        <th>新增時間</th>
+                                        <th>外撥單位/人員</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</th>
+                                        <td>2022/07/15 15:04:39</td>
+                                        <td style="max-width: 550px;">去電旅客手機，由一位女生接聽，對方表明張小姐不在，隨即掛斷客服電話</td>
+                                        <td>2022/07/15 15:30:42</td>
+                                        <td>顧客服務中心/陳真</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</th>
+                                        <td>2022/07/11 13:04:39</td>
+                                        <td style="max-width: 550px;">去電旅客手機，由一位女生接聽，對方表明張小姐不在，隨即掛斷客服電話</td>
+                                        <td>2022/07/15 13:30:42</td>
+                                        <td>顧客服務中心/陳小真</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+
+                    </form>
+                </div>
+                <!--外撥紀錄 TAB 結束 ------------------------------------------------>
+
+
+                <!--案件歷程 TAB 開始 ------------------------------------------------>
+
+                <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
+                    <form class="form-horizontal">
+
+
+                        <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                            <p class="fs-2 fw-bold pb-3 lh-1 ">案件歷程</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>動作</th>
+                                        <th>執行單位/人員</th>
+                                        <th>日期/時間</th>
+                                        
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</th>
+                                        <td>新增案件</td>
+                                        <td>顧客管理課/劉筱珮</td>
+                                        <td>2022/04/01 10:23:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</th>
+                                        <td>修改案件內容</td>
+                                        <td>顧客管理課/劉筱珮</td>
+                                        <td>2022/04/01 10:23:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</th>
+                                        <td>分派案件</td>
+                                        <td>顧客管理課/劉筱珮</td>
+                                        <td>2022/04/01 10:23:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</th>
+                                        <td>上傳檔案</td>
+                                        <td>顧客管理課/劉筱珮</td>
+                                        <td>2022/04/01 10:23:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</th>
+                                        <td>新增備註</td>
+                                        <td>顧客管理課/劉筱珮</td>
+                                        <td>2022/04/01 10:23:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</th>
+                                        <td>新增小禮物郵件資料</td>
+                                        <td>顧客管理課/劉筱珮</td>
+                                        <td>2022/04/01 10:23:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</th>
+                                        <td>設定案件追蹤</td>
+                                        <td>顧客管理課/劉筱珮</td>
+                                        <td>2022/04/01 10:23:25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</th>
+                                        <td>承辦案件</td>
+                                        <td>顧客管理課/劉筱珮</td>
+                                        <td>2022/04/01 10:23:25</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+
+                    </form>
+                </div>
+                <!--案件歷程 TAB 結束 ------------------------------------------------>
 
 
 
@@ -1471,7 +1613,7 @@
         <footer class="container-fluid footer">
             <p class="m-0">Copyright © 2022 THSRC. All rights reserved.</p>
         </footer>
-        
+
     </main>
 
 
@@ -1483,24 +1625,27 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
     <script src="js/footable/footable.js"></script>
+    <!--sidebar-->
     <script src="js/collapsed-sidebar.js"></script>
-    
+   
+    <script src="js/sidebars.js"></script>
+
     <script>
-        jQuery(function($){
-	$('.table').footable({
-        // "editing": {
-		// 	"enabled": true
-		// },
-        // "filtering": {
-		// 	"enabled": true
-		// },
-        "expandFirst": true,
-		"sorting": {
-			"enabled": true,
-            "sorted": true
-		}
-	});
-});
+        jQuery(function ($) {
+            $('.table').footable({
+                // "editing": {
+                // 	"enabled": true
+                // },
+                // "filtering": {
+                // 	"enabled": true
+                // },
+                "expandFirst": true,
+                "sorting": {
+                    "enabled": true,
+                    "sorted": true
+                }
+            });
+        });
     </script>
 
 
