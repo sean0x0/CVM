@@ -248,7 +248,7 @@
 }
 
 body[data-layout-color=dark] {
-    --ct-body-bg: #303841;
+    --ct-body-bg: #FCFBF9;
     --ct-body-color: #94a0ad;
     --ct-link-color: #2A968F;
     --ct-link-hover-color: #fff;
@@ -518,7 +518,8 @@ body[data-layout-color=dark] {
     --ct-body-font-weight: 400;
     --ct-body-line-height: 1.5;
     --ct-body-color: #444444;
-    --ct-body-bg: #FCFBF9
+    --ct-body-bg: #FCFBF9;
+    /* --ct-body-bg: #FBF5E7; */
 }
 
 *,
@@ -15531,7 +15532,7 @@ body[data-layout-color=dark] .btn-soft-secondary:hover {
 }
 
 .card {
-    box-shadow: var(--ct-card-box-shadow);
+    /* box-shadow: var(--ct-card-box-shadow); */
     margin-bottom: 24px
 }
 
@@ -16533,7 +16534,7 @@ body[data-layout-color=dark] .text-body {
 
 html {
     position: relative;
-    min-height: 100%
+    min-height: 100%;
 }
 
 body {
@@ -17775,14 +17776,14 @@ body[data-layout-color=dark] .page-title-box .page-title {
 
 .footer {
     bottom: 0;
-    padding: 30px 20px;
+    /* padding: 30px 20px; */
     
     right: 0;
     color: #FFF;
     font-size:.8rem;
     background-color: var(--ct-footer-bg);
     text-align: center;
-    margin-top:20px;
+    margin-top:0px;
 }
 
 .footer .footer-links a {

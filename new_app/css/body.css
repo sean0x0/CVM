@@ -1,78 +1,80 @@
 #table tbody tr {
-    border: 1px solid #dee2e6;
+  border: 1px solid #dee2e6;
 }
 
 #table tbody tr td:nth-child(1) {
-    border-right: 1px solid #dee2e6;
-    
+  border-right: 1px solid #dee2e6;
+
 }
+
 /* #table tbody tr td:nth-child(2) {
     border-right: 1px solid #dee2e6;
     
 } */
 
 .detail-view td p:not(:last-child) {
-    display: none;
+  display: none;
 }
 
 .detail-view td p:last-child b {
-    display: none;
+  display: none;
 }
 
 /* steppers */
 .stepper {
-    display: none;
+  display: none;
 }
 
 /* Make circles that indicate the steps of the form: */
 .step {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbbbbb;
-    border: none;
-    border-radius: 50%;
-    display: inline-block;
-    opacity: 0.5;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
 }
 
 button:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .step.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Mark the steps that are finished and valid: */
 .step.finish {
-    background-color: #04AA6D;
+  background-color: #04AA6D;
 }
 
 #regForm {
-    background-color: #ffffff;
-    margin: 100px auto;
-    font-family: Raleway;
-    padding: 40px;
-    width: 70%;
-    min-width: 300px;
-  }
-  
-  input {
-    padding: 10px;
-    /* width: 100%; */
-    font-size: 17px;
-    font-family: Raleway;
-    border: 1px solid #aaaaaa;
-  }
-  
-  /* Mark input boxes that gets an error on validation: */
-  input.invalid {
-    background-color: #ffdddd;
-  }
+  background-color: #ffffff;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+input {
+  padding: 10px;
+  /* width: 100%; */
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
 /* hidden arrow */
-  .hidden-arrow.dropdown-toggle:after {
-    display: none
+.hidden-arrow.dropdown-toggle:after {
+  display: none
 }
 
 
@@ -80,90 +82,35 @@ button:hover {
 
 /* rounded thead */
 .table {
-    overflow: hidden;
-    border-top-left-radius: 0.25rem !important;
-    border-top-right-radius: 0.25rem !important;
+  overflow: hidden;
+  border-top-left-radius: 0.25rem !important;
+  border-top-right-radius: 0.25rem !important;
 }
 
-.control-label,.form-check-label {
-    color: #323a46;
-    font-size: 1rem;
+.control-label,
+.form-check-label {
+  color: #323a46;
+  font-size: 1rem;
 }
 
 /*tab*/
 #nav-tabContent {
-    min-height: 500px;
-    /* z-index: 2; */
+  min-height: 500px;
+  border-radius: 0.3rem !important;
+  /* z-index: 2; */
 }
+
 /* .nav-tabs .nav-link{
   z-index: -1;
 } */
 .nav-tabs .nav-link.active {
   margin-top: -2px;
-  
+
   box-shadow: -2px -2px 8px -5px rgb(0 0 0 / 10%);
-  
-} 
 
-/*collapsed sidebar*/
+}
 
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1500;
-    top: 0;
-    left: 0;
-    background-color: #385B5D;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #FFF;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidebar a:hover {
-    color: #d8d8d8;
-  }
-  
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    
-    padding: 10px 0;
-    border: none;
-  }
-  
-  /* .openbtn:hover {
-    background-color: #444;
-  } */
-  
-  #main {
-    transition: margin-left .5s;
-    padding: 16px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
+
 
 /* shadow */
 .shadow-light {
@@ -177,4 +124,44 @@ button:hover {
   margin-left: 4px;
 }
 
-/* back to top */
+/* footer */
+
+
+footer {
+  background-color: var(--background-secondary);
+  padding: 1rem 1rem;
+  position: absolute;
+  height: 50px;
+  margin-top: -50px;
+}
+
+body {
+  padding-bottom: 50px;
+}
+
+/*  features */
+.icon-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.CTA {
+  width: 60px !important;
+  height: 60px !important;
+  z-index: 100;
+  position: absolute;
+  top: 50px;
+  right: 190px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .CTA {
+    display:none !important;
+   
+  }
+}
