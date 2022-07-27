@@ -194,9 +194,7 @@
                     <button class="nav-link border-0" id="nav-refund-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-refund" type="button" role="tab" aria-controls="nav-refund"
                         aria-selected="false">退費/退券/郵遞</button>
-                    <button class="nav-link border-0" id="nav-backtosearch-tab" data-bs-toggle="tab"
-                        data-bs-target="#nav-backtosearch" type="button" role="tab" aria-controls="nav-backtosearch"
-                        aria-selected="false">回查詢</button>
+                    <button type="button" class="nav-link border-0" onclick="location.href='案件查詢.html'">回查詢</button>
                 </div>
             </nav>
 
@@ -1661,6 +1659,95 @@
                 <!--案件追蹤 TAB 開始 ------------------------------------------------>
 
                 <div class="tab-pane fade" id="nav-trace" role="tabpanel" aria-labelledby="nav-trace-tab">
+                    <form class="form-horizontal">
+
+
+                        <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                            <p class="fs-2 fw-bold pb-3 lh-1 ">案件追蹤</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>分派日期</th>
+                                        <th>承辦單位/人員</th>
+                                        <th>案件追蹤日期</th>
+                                        <th>退回說明</th>
+                                        <th></th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</th>
+                                        <td>2022/04/02 10:23:25</td>
+                                        <td>資訊處/邱小原</td>
+                                        <td>毋需回覆</td>
+                                        <td><input type="text" class="form-control form-control-sm" id="rejectReason" placeholder="說明需要案件追蹤的原因"></td>
+                                        <td><button type="button" class="btn btn-sm btn-primary">案件追蹤</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</th>
+                                        <td>2022/04/01 10:23:25</td>
+                                        <td>品牌暨傳播部/黃小芬</td>
+                                        <td>2022/12/31</td>
+                                        <td><input type="text" class="form-control form-control-sm" id="rejectReason" placeholder="說明需要案件追蹤的原因"></td>
+                                        <td><button type="button" class="btn btn-sm btn-primary">案件追蹤</button></td>
+                                    </tr>
+                                    
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                        <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                            <p class="fs-2 fw-bold pb-3 lh-1 ">案件追蹤歷程</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>承辦單位/人員</th>
+                                        <th>案件追蹤日期</th>
+                                        <th>說明</th>
+                                        <th>新增日期</th>
+                                        <th>新增單位/人員</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</th>
+                                        <td>資訊處/邱小原</td>
+                                        <td>毋需回覆</td>
+                                        <td>退回說明:根據種種證明,本案需要進行追蹤改善,請提供改善日期及說明</td>
+                                        <td>2022/02/23 15:12:20</td>
+                                        <td>顧客管理課/劉筱珮</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</th>
+                                        <td>品牌暨傳播部/黃小芬</td>
+                                        <td>2022/12/31</td>
+                                        <td>回覆說明:修改www後, 預計11/30更版, 觀察一個月</td>
+                                        <td>2022/02/23 15:12:20</td>
+                                        <td>顧客管理課/劉筱珮</td>
+                                    </tr>
+                                    
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+
+                    </form>
+                </div>
+                <!--案件追蹤 TAB 結束 ------------------------------------------------>
+
+                <!--退費 TAB 開始 ------------------------------------------------>
+
+                <div class="tab-pane fade" id="nav-refund" role="tabpanel" aria-labelledby="nav-refund-tab">
                     <form class="form-horizontal">
 
 
