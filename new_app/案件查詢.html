@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/footable/footable.standalone.min.css">
+    <!--sidebar-->
+    <link rel="stylesheet" href="css/sidebars.css">
+
+
+
+    <title></title>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom">
+            <!-- Container wrapper -->
+            <div class="container-fluid ">
+
+                <!--collapsed sidebar-->
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <!-- <a href="#">未結案案件</a>
+                    <a href="#">XXXXX</a>
+                    <a href="#">XXXXX</a>
+                    <a href="#">XXXXX</a> -->
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                            您的任務情境
+                          </button>
+                          <div class="collapse show" id="home-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark">新增案件</a></li>
+                                <li><a href="#" class="link-dark">分派案件</a></li>
+                              <li><a href="#" class="link-dark">調查案件</a></li>
+                              <li><a href="#" class="link-dark">回覆案件</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                            Dashboard
+                          </button>
+                          <div class="collapse" id="dashboard-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                              <li><a href="#" class="link-dark">Overview</a></li>
+                              <li><a href="#" class="link-dark">Weekly</a></li>
+                              <li><a href="#" class="link-dark">Monthly</a></li>
+                              <li><a href="#" class="link-dark">Annually</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                            Orders
+                          </button>
+                          <div class="collapse" id="orders-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                              <li><a href="#" class="link-dark">New</a></li>
+                              <li><a href="#" class="link-dark">Processed</a></li>
+                              <li><a href="#" class="link-dark">Shipped</a></li>
+                              <li><a href="#" class="link-dark">Returned</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="border-top my-3"></li>
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                            Account
+                          </button>
+                          <div class="collapse" id="account-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                              <li><a href="#" class="link-dark">New...</a></li>
+                              <li><a href="#" class="link-dark">Profile</a></li>
+                              <li><a href="#" class="link-dark">Settings</a></li>
+                              <li><a href="#" class="link-dark">Sign out</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                </div>
+                <!--collapsed sidebar-->
+                <button class="openbtn" onclick="openNav()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Navbar brand -->
+                <a class="navbar-brand text-center fs-3 fw-bold text-primary" href="#" style="margin-left:110px;">
+                    <!-- <img src="#" height="15"
+                        alt="CVM Logo" loading="lazy" />-->CVM
+                </a>
+                <!-- Toggle button -->
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Icon -->
+                    <a class="text-reset me-3" href="#">
+                        <i class="fa-solid fa-gear"></i>
+                    </a>
+
+                    <!-- Notifications -->
+                    <div class="dropdown">
+                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Avatar -->
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                            id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/CRD.png" class="rounded-circle" height="30" alt="" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <!--Navbar-->
+    <main id="main">
+
+        <section class="container-xl my-4 ">
+
+            <form class="form-horizontal">
+
+                <div class="g-3 text-dark">
+
+                    <!-- 案件查詢 start -->
+                    <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                        <p class="fs-2 fw-bold pb-3 lh-1 ">案件查詢</p>
+
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="builtDateFrom" class="col-auto control-label">建立日期起</label>
+                                <input type="date" class="form-control" id="builtDateFrom" name="builtDateFrom"
+                                    placeholder="" required>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="builtDateTo" class="col-auto control-label">建立日期迄</label>
+                                <input type="date" class="form-control" id="builtDateTo" name="builtDateTo"
+                                    placeholder="" required>
+                            </div>
+
+                        </div>
+                        <div class="row col-12 gy-2 gx-2">
+                            <div class="col">
+                                <label for="type" class="col-12 control-label">案件類型</label>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="checkbox" id="type1" value="諮詢">
+                                    <label class="form-check-label" for="type1">諮詢</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="checkbox" id="type2" value="讚揚">
+                                    <label class="form-check-label" for="type2">讚揚</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="checkbox" id="type3" value="期許">
+                                    <label class="form-check-label" for="type3">期許</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="checkbox" id="type4" value="建議">
+                                    <label class="form-check-label" for="type4">建議</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="checkbox" id="type5" value="抱怨">
+                                    <label class="form-check-label" for="type5">抱怨</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="checkbox" id="type6" value="客訴">
+                                    <label class="form-check-label" for="type6">客訴</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="checkbox" id="type7" value="其他">
+                                    <label class="form-check-label" for="type7">其他</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col">
+                                <label for="number" class="col-auto control-label">案件編號</label>
+                                <input type="text" class="form-control" id="number" name="number" placeholder="">
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col">
+                                <label for="keywords" class="col-auto control-label">案件內容（關鍵字）</label>
+                                <input type="text" class="form-control" id="keywords" name="keywords" placeholder="">
+                            </div>
+
+                        </div>
+                        <div class="row col-12 gy-2 gx-2">
+                            <div class="col">
+                                <label for="manager" class="col-auto control-label">管理人</label>
+                                <select class="form-control" id="manager">
+                                    <option selected>請選擇</option>
+                                    <option value="許文達">許文達</option>
+                                    <option value="劉雅慧">劉雅慧</option>
+                                    <option value="徐惠萍">徐惠萍</option>
+                                    <option value="劉筱珮">劉筱珮</option>
+                                    <option value="林若瑩">林若瑩</option>
+                                    <option value="林欣瑩">林欣瑩</option>
+                                    <option value="張之魁">張之魁</option>
+                                    <option value="夏邦雄">夏邦雄</option>
+                                    <option value="沈文華">沈文華</option>
+                                    <option value="曾如鈺">曾如鈺</option>
+                                    <option value="陳彥妤">陳彥妤</option>
+                                    <option value="黃思綺">黃思綺</option>
+                                    <option value="張永豐">張永豐</option>
+                                    <option value="武喜佳">武喜佳</option>
+                                    <option value="林巧玟">林巧玟</option>
+                                    <option value="方意婷">方意婷</option>
+                                    <option value="方舒賢">方舒賢</option>
+                                    <option value="周詩涵">周詩涵</option>
+                                    <option value="王翊如">王翊如</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row col-12 gy-2 gx-2">
+                            <div class="col">
+                                <label for="customerInfo" class="col-12 control-label">顧客資訊查詢</label>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="customerInfo1">
+                                    <label class="form-check-label" for="info1">姓名</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="customerInfo2">
+                                    <label class="form-check-label" for="info2">電子郵件</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="customerInfo3">
+                                    <label class="form-check-label" for="info3">行動電話</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="customerInfo4">
+                                    <label class="form-check-label" for="info4">地址</label>
+                                </div>
+                                <input type="text" class="form-control" id="customerInfo" name="customerInfo"
+                                    placeholder="">
+                            </div>
+
+                        </div>
+                        <div class="row col-12 gy-2 gx-2">
+                            <div class="col">
+                                <label for="status" class="col-12 control-label">案件狀態</label>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="checkbox" id="status1" value="新案件">
+                                    <label class="form-check-label" for="status1">新案件</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="checkbox" id="status2" value="待回覆">
+                                    <label class="form-check-label" for="status2">待回覆</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="checkbox" id="status3" value="待確認">
+                                    <label class="form-check-label" for="status3">待確認</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" type="checkbox" id="status4" value="已結案">
+                                    <label class="form-check-label" for="status4">已結案</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                       
+                    </div>
+                    <!-- 案件查詢 end  -->
+                    <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                        <p class="fs-2 fw-bold pb-3 lh-1 ">查詢結果</p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>案件編號</th>
+                                    <th>案件類型</th>
+                                    <th>狀態</th>
+                                    <th>顧客姓名</th>
+                                    <th>行動電話</th>
+                                    <th>管理人</th>
+                                    <th>建立日期</th>
+                                    <th></th>
+                                    <th data-breakpoints="all">案件內容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>202112300004</td>
+                                    <td>抱怨</td>
+                                    <td>處理中</td>
+                                    <td>王小明</td>
+                                    <td>0912345678</td>
+                                    <td>劉筱珮</td>
+                                    <td>2022/07/15 16:23:45</td>
+                                    <td><button type="button" class="btn btn-sm btn-primary">編輯</button></td>
+                                    <td>我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容我是內容
+                                    </td>
+                                </tr>
+                                
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                   
+            </form>
+
+
+        </section>
+        <footer class="container-fluid footer">
+            <p class="m-0">Copyright © 2022 THSRC. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    <script src="js/footable/footable.js"></script>
+    <!--sidebar-->
+    <script src="js/collapsed-sidebar.js"></script>
+
+    <script src="js/sidebars.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $('.table').footable({
+                // "editing": {
+                // 	"enabled": true
+                // },
+                // "filtering": {
+                // 	"enabled": true
+                // },
+                "expandFirst": true,
+                "sorting": {
+                    "enabled": true,
+                    "sorted": true
+                },
+                "empty": "沒有結果",
+                "paging": {
+                    "enabled": true,
+                    "size": 10,
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

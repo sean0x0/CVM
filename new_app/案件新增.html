@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/footable/footable.standalone.min.css">
+    <!--sidebar-->
+    <link rel="stylesheet" href="css/sidebars.css">
+
+
+
+    <title></title>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom">
+            <!-- Container wrapper -->
+            <div class="container-fluid ">
+
+                <!--collapsed sidebar-->
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                    <!-- <a href="#">未結案案件</a>
+                    <a href="#">XXXXX</a>
+                    <a href="#">XXXXX</a>
+                    <a href="#">XXXXX</a> -->
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                            您的任務情境
+                          </button>
+                          <div class="collapse show" id="home-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark">新增案件</a></li>
+                                <li><a href="#" class="link-dark">分派案件</a></li>
+                              <li><a href="#" class="link-dark">調查案件</a></li>
+                              <li><a href="#" class="link-dark">回覆案件</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                            Dashboard
+                          </button>
+                          <div class="collapse" id="dashboard-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                              <li><a href="#" class="link-dark">Overview</a></li>
+                              <li><a href="#" class="link-dark">Weekly</a></li>
+                              <li><a href="#" class="link-dark">Monthly</a></li>
+                              <li><a href="#" class="link-dark">Annually</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                            Orders
+                          </button>
+                          <div class="collapse" id="orders-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                              <li><a href="#" class="link-dark">New</a></li>
+                              <li><a href="#" class="link-dark">Processed</a></li>
+                              <li><a href="#" class="link-dark">Shipped</a></li>
+                              <li><a href="#" class="link-dark">Returned</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="border-top my-3"></li>
+                        <li class="mb-1">
+                          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                            Account
+                          </button>
+                          <div class="collapse" id="account-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                              <li><a href="#" class="link-dark">New...</a></li>
+                              <li><a href="#" class="link-dark">Profile</a></li>
+                              <li><a href="#" class="link-dark">Settings</a></li>
+                              <li><a href="#" class="link-dark">Sign out</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                </div>
+                <!--collapsed sidebar-->
+                <button class="openbtn" onclick="openNav()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <!-- Navbar brand -->
+                <a class="navbar-brand text-center fs-3 fw-bold text-primary" href="#" style="margin-left:110px;">
+                    <!-- <img src="#" height="15"
+                        alt="CVM Logo" loading="lazy" />-->CVM
+                </a>
+                <!-- Toggle button -->
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Icon -->
+                    <a class="text-reset me-3" href="#">
+                        <i class="fa-solid fa-gear"></i>
+                    </a>
+
+                    <!-- Notifications -->
+                    <div class="dropdown">
+                        <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Avatar -->
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                            id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="img/CRD.png" class="rounded-circle" height="30" alt="" loading="lazy" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </header>
+    <!--Navbar-->
+    <main id="main">
+
+        <section class="container-xl my-4 ">
+            <!-- <div class="mb-4 bg-white rounded-3 d-flex justify-content-center shadow-light">
+                <div class="row p-3 text-center">
+                    <p class="col-12 fs-1 fw-bolder m-0 p-0 g-0">新增案件
+                    </p>
+                    
+
+
+                </div>
+            </div> -->
+            <div class="mt-2 mb-4 bg-white rounded-3 shadow-light d-flex justify-content-center">
+ 
+                        <div class="fs-2 fw-bold flex-grow-1 ms-2 my-auto py-3">
+                          <img src="img/create.png" height="45" class="mx-2" alt="...">新增案件
+                        </div>
+
+            </div>
+
+            <form class="form-horizontal">
+
+                <div class="g-3 text-dark">
+
+                   
+                    <!-- 顧客資訊 start -->
+                    <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                        <p class="fs-2 fw-bold pb-3 lh-1 ">顧客資訊</p>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="name" class="col-auto control-label">顧客姓名</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="顧客姓名"
+                                    required>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="gender" class="col-md-12 control-label">性別</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" checked>
+                                    <label class="form-check-label" for="flexRadioDefault1">男</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">女</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required row gy-1 gx-2">
+                                <label for="email" class="col-12 control-label">電子信箱</label>
+                                <div class="col-6 gy-0">
+                                    <label class="visually-hidden" for="autoSizingInput">Name</label>
+                                    <input type="email" class="form-control" id="autoSizingInput"
+                                        placeholder="">
+                                </div>
+                                <div class="col-6 gy-0">
+                                    <label class="visually-hidden" for="autoSizingInputGroup"></label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">@</div>
+                                        <input type="email" class="form-control" id="autoSizingInputGroup"
+                                            placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="phone" class="col-auto control-label">行動電話</label>
+                                <input type="text" class="form-control" id="phone" name="phone"
+                                    placeholder="行動電話" required>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="address" class="col-auto control-label">地址</label>
+                                <input type="text" class="form-control" id="address" name="address"
+                                    placeholder="請輸入地址" required>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required row gy-1 gx-2 align-items-center">
+                                <label for="landline" class="col-12 control-label">室內電話</label>
+                                <div class="col-6 gy-0">
+                                    <label class="visually-hidden" for="autoSizingInput">電話號碼</label>
+                                    <input type="text" class="form-control" id="landline" placeholder="">
+                                </div>
+
+
+                                <div class="col-6 gy-0">
+                                    <label class="visually-hidden" for="autoSizingInputGroup">分機</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">分機</div>
+                                        <input type="text" class="form-control" id="extension" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- 顧客資訊 end  -->
+
+                    <!-- 車票資訊 start -->
+                    <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                        <p class="fs-2 fw-bold pb-3 lh-1 ">車票資訊</p>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="ticketDate" class="col-auto control-label">車票日期</label>
+                                <input type="date" class="form-control" id="ticketDate" name="ticketDate"
+                                    placeholder="" required>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="trainNo" class="col-auto control-label">車次</label>
+                                <input type="text" class="form-control" id="trainNo" name="trainNo"
+                                    placeholder="" required>
+                            </div>
+
+                        </div>
+
+                        <div class="row col-lg-6 gy-2 gx-2 justify-content-between">
+                            <div class="col required row gy-1 gx-2">
+                                <label for="email" class="col-12 control-label">起迄車站/時間</label>
+
+                                <div class="col-3 gy-0">
+                                    <label class="visually-hidden" for="autoSizingInputGroup">起站</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">起站</div>
+                                        <select class="form-control" name="selectStartStation">
+                                            <option selected>請選擇...</option>
+                                            <option value="1">南港</option>
+                                            <option value="2">台北</option>
+                                            <option value="3">板橋</option>
+                                            <option value="4">桃園</option>
+                                            <option value="5">新竹</option>
+                                            <option value="6">苗栗</option>
+                                            <option value="7">台中</option>
+                                            <option value="8">彰化</option>
+                                            <option value="9">雲林</option>
+                                            <option value="10">嘉義</option>
+                                            <option value="11">台南</option>
+                                            <option value="12">左營</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3 gy-0">
+                                    <label class="visually-hidden" for="startTime">時間</label>
+                                    <input type="time" class="form-control" id="startTime" placeholder="">
+                                </div>
+                                <div class="col-3 gy-0">
+                                    <label class="visually-hidden" for="autoSizingInputGroup">迄站</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">迄站</div>
+                                        <select class="form-control" name="selectStartStation">
+                                            <option selected>請選擇...</option>
+                                            <option value="1">南港</option>
+                                            <option value="2">台北</option>
+                                            <option value="3">板橋</option>
+                                            <option value="4">桃園</option>
+                                            <option value="5">新竹</option>
+                                            <option value="6">苗栗</option>
+                                            <option value="7">台中</option>
+                                            <option value="8">彰化</option>
+                                            <option value="9">雲林</option>
+                                            <option value="10">嘉義</option>
+                                            <option value="11">台南</option>
+                                            <option value="12">左營</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3 gy-0">
+                                    <label class="visually-hidden" for="startTime">時間</label>
+                                    <input type="time" class="form-control" id="startTime" placeholder="">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="car" class="col-auto control-label">車廂</label>
+                                <select class="form-control" name="car">
+                                    <option selected>請選擇...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="seat" class="col-auto control-label">座位</label>
+                                <input type="text" class="form-control" id="seat" name="seat" placeholder="3C"
+                                    required>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required row gy-1 gx-2 align-items-center">
+                                <label for="landline" class="col-12 control-label">票號/卡號</label>
+                                <div class="col-6 gy-0">
+                                    <label class="visually-hidden" for="autoSizingInputGroup">車票種類</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">票種</div>
+                                        <select class="form-control" id="ticketType" placeholder="">
+                                            <option selected>請選擇票種</option>
+                                            <option>訂位代號</option>
+                                            <option>票號</option>
+                                            <option>回數票</option>
+                                            <option>定期票</option>
+                                            <option>悠遊聯名卡</option>
+                                            <option>一卡通聯名卡</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 gy-0">
+                                    <label class="visually-hidden" for="autoSizingInput">票號</label>
+                                    <input type="text" class="form-control" id="ticketNo" placeholder="請輸入票種號碼">
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- 車票資訊 end  -->
+
+                    <!-- 補充資訊 start -->
+                    <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                        <p class="fs-2 fw-bold pb-3 lh-1 ">補充資訊</p>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="inquiry" class="col-auto control-label">問題分類</label>
+                                <select class="form-control" name="inquiry">
+                                    <option disabled value="">請選擇</option>
+                                    <option value="A">列車班次及時間</option>
+                                    <option value="B">列車人員服務態度</option>
+                                    <option value="C" selected>車廂服務(列車運轉問題)</option>
+                                    <option value="D">車站人員服務態度</option>
+                                    <option value="E">車站設施</option>
+                                    <option value="F">轉乘服務</option>
+                                    <option value="G">訂票相關服務</option>
+                                    <option value="H">企業/行銷活動及附屬事業商品</option>
+                                    <option value="I" selected>補充顧客意見資料</option>
+                                    <option value="J">其他</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="duration" class="col-12 control-label">搭乘時間</label>
+                                <input type="time" class="form-control" id="duration" name="duration"
+                                    placeholder="" required>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="duration" class="col-12 control-label">發生時間</label>
+                                <input type="time" class="form-control" id="occurtime" name="occurtime"
+                                    placeholder="" required>
+                            </div>
+
+                        </div>
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required row gy-1 gx-2">
+                                <label for="duration" class="col-12 control-label">列車運行區間</label>
+                                <div class="col-6 gy-0">
+                                    <label class="visually-hidden" for="autoSizingInputGroup">從</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">從</div>
+                                        <select class="form-control" name="selectStartStation">
+                                            <option selected>請選擇...</option>
+                                            <option value="1">南港</option>
+                                            <option value="2">台北</option>
+                                            <option value="3">板橋</option>
+                                            <option value="4">桃園</option>
+                                            <option value="5">新竹</option>
+                                            <option value="6">苗栗</option>
+                                            <option value="7">台中</option>
+                                            <option value="8">彰化</option>
+                                            <option value="9">雲林</option>
+                                            <option value="10">嘉義</option>
+                                            <option value="11">台南</option>
+                                            <option value="12">左營</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 gy-0">
+                                    <label class="visually-hidden" for="autoSizingInputGroup">開往</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">開往</div>
+                                        <select class="form-control" name="selectStartStation">
+                                            <option selected>請選擇...</option>
+                                            <option value="1">南港</option>
+                                            <option value="2">台北</option>
+                                            <option value="3">板橋</option>
+                                            <option value="4">桃園</option>
+                                            <option value="5">新竹</option>
+                                            <option value="6">苗栗</option>
+                                            <option value="7">台中</option>
+                                            <option value="8">彰化</option>
+                                            <option value="9">雲林</option>
+                                            <option value="10">嘉義</option>
+                                            <option value="11">台南</option>
+                                            <option value="12">左營</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <!-- 補充資訊 end  -->
+
+
+
+                    <!-- 案件內容 start -->
+                    <div class="p-3 row g-1 bg-light text-dark rounded-3 justify-content-between mb-4">
+                        <p class="fs-2 fw-bold pb-3 lh-1 ">案件內容</p>
+
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col-auto required">
+                                <label for="type" class="col-auto control-label">案件類型</label>
+                                <select class="form-control" name="type">
+                                    <option selected>請選擇案件類型</option>
+                                    <option value="諮詢">諮詢</option>
+                                    <option value="讚揚">讚揚</option>
+                                    <option value="期許">期許</option>
+                                    <option value="建議">建議</option>
+                                    <option value="抱怨">抱怨</option>
+                                    <option value="客訴">客訴</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <label for="urgent" class="col-md-12 control-label invisible">急件</label>
+                                <div class="form-check">
+
+                                    <input class="form-check-input" type="checkbox" id="urgent" value="急件">
+                                    <label class="form-check-label" for="urgent">急件</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--意見來源-->
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="source" class="col-auto control-label">意見來源</label>
+                                <select class="form-control" id="source" placeholder="意見來源" required>
+                                    <option selected>請選擇來源</option>
+                                    <option value="客服">客服</option>
+                                    <option value="列車">列車</option>
+
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!--回覆方式-->
+                        <div class="row col-md-6 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="reply" class="col-12 control-label">回覆方式</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">電話聯絡</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">電子信箱</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">郵寄</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">毋需回覆</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--案件主旨-->
+                        <div class="row col-12 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="subject" class="col-12 control-label">案件主旨</label>
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                    placeholder="請輸入主旨" required>
+                            </div>
+                        </div>
+                        <!--案件內容-->
+                        <div class="row col-12 gy-2 gx-2">
+                            <div class="col required">
+                                <label for="content" class="col-12 control-label">案件內容</label>
+                                <textarea type="text" class="form-control" id="content" name="content"
+                                    placeholder="請輸入內容"
+                                    required>高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒高鐵好棒棒</textarea>
+                            </div>
+                        </div>
+                        
+
+
+                        
+
+                </div>
+                <div class="col-12 d-grid gap-2 d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary my-3">確認新增</button>
+                    <button type="button" class="btn btn-primary my-3">取消</button>
+                </div>
+            </form>
+
+
+        </section>
+        <footer class="container-fluid footer">
+            <p class="m-0">Copyright © 2022 THSRC. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+    <script src="js/footable/footable.js"></script>
+    <!--sidebar-->
+    <script src="js/collapsed-sidebar.js"></script>
+
+    <script src="js/sidebars.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $('.table').footable({
+                // "editing": {
+                // 	"enabled": true
+                // },
+                // "filtering": {
+                // 	"enabled": true
+                // },
+                "expandFirst": true,
+                "sorting": {
+                    "enabled": true,
+                    "sorted": true
+                },
+                "empty": "沒有結果",
+                "paging": {
+                    "enabled": true,
+                    "size": 10,
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
